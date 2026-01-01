@@ -7459,7 +7459,7 @@ drihq3.togran.m:
 	ProvidesPrerequisite@drihq2:
 		Prerequisite: drterrep2
 mcv.aterrorist:
-	Inherits: ^Soldier
+	Inherits: ^Vehicle
 	Inherits@selection: ^SelectableSupportUnit
 	Inherits@mcv: ^MCV
     Inherits@conyard: ^Conyard
