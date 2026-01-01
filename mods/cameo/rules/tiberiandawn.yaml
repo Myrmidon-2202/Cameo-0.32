@@ -6756,7 +6756,7 @@ IOKNUK2:
 		VoiceSet: USAColdFusionReactorVoice
 		
 iokblackmarket:
-	Inherits: OILB.camea
+	# Inherits: OILB.camea
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
 	Inherits@camo: ^BuildingCamoLevel2
