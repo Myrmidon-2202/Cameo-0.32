@@ -1,0 +1,1278 @@
+^WC1DamagedFire:
+	burn1: wc_burn
+        Start: 0
+		Length: 4
+		ZOffset: 512
+		Offset: 0, -9
+        AddExtension: True
+	burn2: wc_burn
+        Start: 4
+		Length: 4
+		ZOffset: 512
+		Offset: 0, -9
+        AddExtension: True
+^WCInfantry:
+	WithDeathAnimation:
+        UseDeathTypeSuffix: false
+        CrushedSequence: die
+        CrushedSequencePalette: player
+        CrushedPaletteIsPlayerPalette: true
+
+####################################################################################################
+#		BUILDING human
+####################################################################################################
+wc_h_townhall:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 3
+	damaged-idle: wc_buildings
+		Start: 4
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,2
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 1
+wc_h_farm:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 6
+	damaged-idle: wc_buildings
+		Start: 7
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,5
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 2
+        AddExtension: true
+    expand-icon: wc_chrome
+        Start: 3
+        AddExtension: true 
+    expand-idle: wc_buildings
+        Start: 48
+    damaged-expand-idle: wc_buildings
+        Start: 49
+wc_h_barracks:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 9
+	damaged-idle: wc_buildings
+		Start: 10
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,8	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 5   
+wc_h_lumbermill:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 12
+	damaged-idle: wc_buildings
+		Start: 13
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,11	
+		Length: 3
+		Tick: 320
+	resources: proctwr
+		Length: 6
+		Offset: -30,-17
+	damaged-resources: proctwr
+		Start: 6
+		Length: 6
+		Offset: -30,-17
+	icon: wc_chrome
+        Start: 6
+wc_h_blacksmith:
+	Inherits: ^WC1DamagedFire
+    idle: wc_buildings
+		Start: 36		
+	damaged-idle: wc_buildings
+		Start: 37		
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,35	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 7 
+wc_h_church:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 18
+	damaged-idle: wc_buildings
+		Start: 19
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	place: wc_buildings
+		Start: 18
+	make: wc_buildings
+		Frames: 0,1,17	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 8
+wc_h_stable:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 54
+	damaged-idle: wc_buildings
+		Start: 55
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,53	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 9
+wc_h_tower:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 21
+	damaged-idle: wc_buildings
+		Start: 22
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,20	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 10
+wc_h_stormwind:
+	Inherits: ^WC1DamagedFire
+	idle: wc_superweapons
+		Start: 3		
+	damaged-idle: wc_superweapons
+		Start: 4	
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_superweapons
+		Start: 0	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 11
+        
+wc_h_guard_tower:
+	Inherits: ^WC1DamagedFire
+    idle: 
+        Start: 1
+    make: wc_buildings
+		Frames: 0,1
+		Length: 2
+		Tick: 450  
+	icon: wc_h_guard_tower_icon
+    dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80                
+####################################################################################################
+#		BUILDING orc
+####################################################################################################
+
+wc_o_townhall:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 24
+	damaged-idle: wc_buildings
+		Start: 25
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,23	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 21
+        
+wc_o_farm:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+        Start: 27
+	damaged-idle: wc_buildings
+		Start: 28
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+        Frames: 0,1,26
+		Length: 3
+        Tick: 320
+	icon: wc_chrome
+        Start: 22
+        AddExtension: true
+    expand-icon: wc_chrome
+        Start: 23
+        AddExtension: true  
+    expand-idle: wc_buildings
+        Start: 51
+    damaged-expand-idle: wc_buildings
+        Start: 52     
+        
+wc_o_barracks:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 30		
+	damaged-idle: wc_buildings
+		Start: 31		
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,29
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 25
+        
+wc_o_lumbermill:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 33
+	damaged-idle: wc_buildings
+		Start: 34		
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,32	
+		Length: 3
+		Tick: 320
+	resources: proctwr
+		Length: 6
+		Offset: -30,-17
+	damaged-resources: proctwr
+		Start: 6
+		Length: 6
+		Offset: -30,-17
+	icon: wc_chrome
+        Start: 26
+        
+wc_o_blacksmith:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 15
+	damaged-idle: wc_buildings
+		Start: 16
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,14
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 27
+        
+wc_o_damnedtemple:
+	Defaults:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 39	
+	damaged-idle: wc_buildings
+		Start: 40	
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	place: wc_buildings
+		Start: 3
+	make: wc_buildings
+		Frames: 0,1,38
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 28
+        
+wc_o_kennel:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 42		
+	damaged-idle: wc_buildings
+		Start: 43	
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,41	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 29
+        
+wc_o_tower:
+	Inherits: ^WC1DamagedFire
+	idle: wc_buildings
+		Start: 45		
+	damaged-idle: wc_buildings
+		Start: 46		
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_buildings
+		Frames: 0,1,44	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 30
+
+wc_o_blackrockspire:
+	Inherits: ^WC1DamagedFire
+	idle: wc_superweapons
+		Start: 6		
+	damaged-idle: wc_superweapons
+		Start: 7	
+	dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80
+	make: wc_superweapons
+		Frames: 0,1,5	
+		Length: 3
+		Tick: 320
+	icon: wc_chrome
+        Start: 31
+ 
+wc_goldmine:
+	Inherits: ^WC1DamagedFire
+    idle: wc_goldmine
+        Start: 0
+    damaged-idle: wc_goldmine
+        Start: 1
+    make: wc_buildings
+		Frames: 0,1
+		Length: 2
+		Tick: 450  
+	icon: wc_chrome
+        Start: 0
+    dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80    
+
+wc_goldmine.bot:
+	Inherits: wc_goldmine
+        
+wc_o_guard_tower:     
+	Inherits: ^WC1DamagedFire
+    idle: 
+        Start: 1
+    make: wc_buildings
+		Frames: 0,1
+		Length: 2
+		Tick: 450      
+    icon: wc_chrome
+        Start: 24
+    dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80   
+####################################################################################################
+#		UNIT human
+####################################################################################################
+
+wc_h_peasant:
+	Inherits: ^WCInfantry
+	stand: wc_h_peasant.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	idle: wc_h_peasant.shp
+		Start: 0		
+        Facings: -8
+        AddExtension: False
+	run: wc_h_peasant.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	harvest: wc_h_peasant.shp
+		Start: 47
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False  
+    dock: wc_h_peasant_full.shp
+		Start: 0	
+		Facings: -8
+     	AddExtension: False   
+	dock-loop: wc_h_peasant_full.shp
+		Start: 0	
+		Facings: -8
+    	AddExtension: False         
+	die: wc_h_peasant.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_h_peasant.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 12
+        AddExtension: true
+    townhall_icon: wc_chrome
+        Start: 1
+
+wc_h_peasant_engineer:
+	Inherits: wc_h_peasant
+	top: wc_engineerhelmet2
+		Facings: 8
+	icon: wc_h_engineericon
+        Start: 0
+        AddExtension: true
+    townhall_icon: wc_h_engineericon
+        Start: 0
+
+wc_h_peasant_full:
+	Defaults: wc_h_peasant
+	Inherits: wc_h_peasant
+	idle: wc_h_peasant_full.shp
+		Facings: -8
+        AddExtension: False        
+   	die: wc_h_peasant_full.shp
+		Start: 48
+		Length: 3
+		Tick: 80
+		AddExtension: False     
+   	die-crushed: wc_h_peasant_full.shp
+		Start: 48
+		Length: 3
+		Tick: 80
+		AddExtension: False 
+        
+wc_h_footman:
+	Inherits: ^WCInfantry
+	stand: wc_h_footman.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_h_footman.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_h_footman.shp
+		Start: 48
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_h_footman.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_h_footman.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 13
+        AddExtension: true
+wc_h_archer:
+	Inherits: ^WCInfantry
+	stand: wc_h_archer.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_h_archer.shp
+		Start: 8
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_h_archer.shp
+		Start: 40
+		Length: 3
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_h_archer.shp
+		Start: 63
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_h_archer.shp
+		Start: 63
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 14
+        AddExtension: true
+wc_h_knight:
+	Inherits: ^WCInfantry
+	idle: wc_h_knight.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_h_knight.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_h_knight.shp
+		Start: 48
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_h_knight.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_h_knight.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 15
+        AddExtension: true
+wc_h_catapult:
+	Inherits: ^WCInfantry
+	idle: wc_catapult.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_catapult.shp
+		Start: 8
+		Length: 2
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_catapult.shp
+		Start: 24
+		Length: 3
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_catapult.shp
+		Start: 48
+		Length: 2
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_catapult.shp
+		Start: 48
+		Length: 2
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 16
+        AddExtension: true
+wc_h_conjurer:
+	Inherits: ^WCInfantry
+	stand: wc_h_conjurer.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_h_conjurer.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_h_conjurer.shp
+		Start: 48
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_h_conjurer.shp
+		Start: 79
+		Length: 4
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_h_conjurer.shp
+		Start: 79
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 17
+        AddExtension: true
+wc_h_cleric:
+	Inherits: ^WCInfantry
+	stand: wc_h_cleric.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_h_cleric.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_h_cleric.shp
+		Start: 48
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_h_cleric.shp
+		Start: 79
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_h_cleric.shp
+		Start: 79
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 18
+        AddExtension: true
+wc_h_scorpion:
+	Inherits: ^WCInfantry
+	stand: wc_n_scorpion.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_n_scorpion.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_n_scorpion.shp
+		Start: 48
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_n_scorpion.shp
+		Start: 88
+		Length: 5
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_n_scorpion.shp
+		Start: 88
+		Length: 5
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 19
+        AddExtension: true
+        
+wc_h_waterelemental:
+	Inherits: ^WCInfantry
+	stand: wc_n_waterelemental.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_n_waterelemental.shp
+		Start: 8
+		Length: 3
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_n_waterelemental.shp
+		Start: 32
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_n_waterelemental.shp
+		Start: 71
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_n_waterelemental.shp
+		Start: 71
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 20
+        AddExtension: true
+ 
+wc_n_fireelemental:
+ 	Inherits: ^WCInfantry
+	stand: wc_n_fireelemental
+		Start: 0	
+		Facings: -8
+	run: wc_n_fireelemental
+		Start: 8
+		Length: 6
+		Facings: -8
+		Tick: 100
+	shoot: wc_n_fireelemental
+		Start: 55
+        Length: 6
+		Facings: -8
+		Tick: 100      
+	die: wc_n_fireelemental
+		Start: 103
+		Length: 5
+		Tick: 80
+	die-crushed: wc_n_fireelemental
+		Start: 103
+		Length: 5
+		Tick: 80
+	icon: wc_n_fireelemental_icon
+    
+####################################################################################################
+#		UNIT orc
+####################################################################################################
+
+wc_o_peon:
+	Inherits: ^WCInfantry
+	stand: wc_o_peon.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	idle: wc_o_peon.shp
+		Start: 0		
+        Facings: -8
+        AddExtension: False
+	run: wc_o_peon.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	harvest: wc_o_peon.shp
+		Start: 47
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+    dock: wc_o_peon_full.shp
+		Start: 0	
+		Facings: -8
+     	AddExtension: False   
+	dock-loop: wc_o_peon_full.shp
+		Start: 0	
+		Facings: -8
+    	AddExtension: False         
+	die: wc_o_peon.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_o_peon.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 32
+        AddExtension: true
+    townhall_icon: wc_chrome
+        Start: 21
+
+wc_o_peon_engineer:
+	Inherits: wc_o_peon
+	top: wc_engineerhelmet
+		Facings: 8
+	icon: wc_o_engineericon
+        Start: 0
+        AddExtension: true
+    townhall_icon: wc_o_engineericon
+        Start: 0
+
+wc_o_peon_full:
+	Inherits: wc_o_peon
+    Defaults: wc_o_peon
+    dock: wc_o_peon_full.shp
+		Start: 0	
+		Facings: -8
+     	AddExtension: False   
+	dock-loop: wc_o_peon_full.shp
+		Start: 0	
+		Facings: -8
+    	AddExtension: False    
+	idle: wc_o_peon_full.shp
+		Facings: -8
+   	die: wc_o_peon_full.shp
+		Start: 48
+		Length: 3
+		Tick: 80
+		AddExtension: False 
+   	die-crushed: wc_o_peon_full.shp
+		Start: 48
+		Length: 3
+		Tick: 80
+		AddExtension: False  
+        
+wc_o_grunt:
+	Inherits: ^WCInfantry
+	stand: wc_o_grunt.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_o_grunt.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_o_grunt.shp
+		Start: 48
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_o_grunt.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_o_grunt.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 33
+        AddExtension: true
+        
+wc_o_spearman:
+	Inherits: ^WCInfantry
+	stand: wc_o_spearman.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_o_spearman.shp
+		Start: 8
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_o_spearman.shp
+		Start: 40
+		Length: 3
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_o_spearman.shp
+		Start: 63
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_o_spearman.shp
+		Start: 63
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 34
+        AddExtension: true
+        
+wc_o_raider:
+	Inherits: ^WCInfantry
+	idle: wc_o_raider.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_o_raider.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_o_raider.shp
+		Start: 48
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_o_raider.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_o_raider.shp
+		Start: 88
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 35
+        AddExtension: true
+        
+wc_o_catapult:
+	Inherits: wc_h_catapult
+	icon: wc_chrome
+        Start: 36
+        AddExtension: true
+        
+wc_o_warlock:
+	Inherits: ^WCInfantry
+	stand: wc_o_warlock.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_o_warlock.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_o_warlock.shp
+		Start: 48
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_o_warlock.shp
+		Start: 79
+		Length: 4
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_o_warlock.shp
+		Start: 79
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 37
+        AddExtension: true
+        
+wc_o_necrolyte:
+	Inherits: ^WCInfantry
+	stand: wc_o_necrolyte.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_o_necrolyte.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_o_necrolyte.shp
+		Start: 48
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_o_necrolyte.shp
+		Start: 79
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_o_necrolyte.shp
+		Start: 79
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 38
+        AddExtension: true
+        
+wc_o_spider:
+	Inherits: ^WCInfantry
+	stand: wc_n_spider.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_n_spider.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_n_spider.shp
+		Start: 48
+		Length: 4
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_n_spider.shp
+		Start: 79
+		Length: 4
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_n_spider.shp
+		Start: 79
+		Length: 3
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 39
+        AddExtension: true
+      
+wc_o_skeleton:
+	Inherits: ^WCInfantry
+	stand: wc_n_skeleton.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+  	idle: wc_n_skeleton.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False      
+	run: wc_n_skeleton.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_n_skeleton.shp
+		Start: 48
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_n_skeleton.shp
+		Start: 88
+		Length: 5
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_n_skeleton.shp
+		Start: 88
+		Length: 5
+		Tick: 80
+		AddExtension: False
+    raise: wc_n_skeleton.shp
+        Start: 93
+		Length: 5
+		Tick: 80
+		AddExtension: False  
+	icon: wc_chrome
+        Start: 40
+        AddExtension: true
+    dot: invisibleitem    
+        AddExtension: true
+wc_o_demon:
+	Inherits: ^WCInfantry
+	stand: wc_n_demon.shp
+		Start: 0	
+		Facings: -8
+		AddExtension: False
+	run: wc_n_demon.shp
+		Start: 8
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	shoot: wc_n_demon.shp
+		Start: 48
+		Length: 5
+		Facings: -8
+		Tick: 100
+		AddExtension: False
+	die: wc_n_demon.shp
+		Start: 88
+		Length: 5
+		Tick: 80
+		AddExtension: False
+	die-crushed: wc_n_demon.shp
+		Start: 88
+		Length: 5
+		Tick: 80
+		AddExtension: False
+	icon: wc_chrome
+        Start: 41
+        AddExtension: true 
+
+wc_n_brigand:
+    stand: 
+        Start: 0
+        Facings: -8
+    run:
+        Start: 8
+        Length: 4
+        Facings: -8
+        Tick: 100
+    shoot: 
+        Start: 40
+        Facings: -8
+        Length: 4       
+    die: 
+        Start: 72
+        Length: 2
+    die-crushed: 
+        Start: 72
+        Length: 2      
+    icon: wc_n_brigand_icon
+        AddExtension: true    
+
+wc_n_ogre:
+    stand: 
+        Start: 0
+        Facings: -8
+    run:
+        Start: 8
+        Length: 5
+        Facings: -8
+        Tick: 100
+    shoot: 
+        Start: 48
+        Facings: -8
+        Length: 5      
+    die: 
+        Start: 88
+        Length: 5
+    die-crushed: 
+        Start: 88
+        Length: 5      
+    icon: wc_n_ogre_icon
+        AddExtension: true    
+
+wc_n_slime:
+    stand: wc_n_slime
+        Start: 0
+        Length: 8
+    run: wc_n_slime
+        Start: 8
+        Length: 40
+    shoot: wc_n_slime
+        Start: 48
+        Length: 9
+        Facings: -8
+    die: wc_n_slime
+        Start: 120
+        Length: 5
+    icon: wc_n_slime
+        Start: 0     
+
+wc_n_portal:
+    idle: wc_portal
+    make: wc_buildings
+		Frames: 0,1
+		Length: 2
+		Tick: 450  
+	icon: wc_chrome
+        Start: 42
+    dead: wc_explosion
+		Start: 0
+		Length: 13
+		Tick: 80     
+
+####################################################################################################
+#		UPGRADES
+####################################################################################################
+wc_h_str_arrow:
+    icon:
+        
+wc_h_str_arrow2:
+    icon:
+      
+wc_h_str_sword:
+    icon:
+        
+wc_h_str_sword2:
+    icon:  
+          
+wc_h_str_shield:
+    icon:
+        
+wc_h_str_shield2:
+    icon: 
+
+wc_h_horses:
+    icon:
+        
+wc_h_horses2:
+    icon:     
+ 
+wc_o_str_spear:
+    icon:
+        
+wc_o_str_spear2:
+    icon:
+      
+wc_o_str_axe:
+    icon:
+        
+wc_o_str_axe2:
+    icon:  
+          
+wc_o_str_shield:
+    icon:
+        
+wc_o_str_shield2:
+    icon: 
+
+wc_o_wolves:
+    icon:
+        
+wc_o_wolves2:
+    icon:      
+    
+fireballcleric:
+    idle: wc1projectiles
+        Start: 0
+        Facings: -8
+        
+fireballconjurer:
+    idle: wc1projectiles
+        Start: 16
+        Facings: -8
+        
+waterelementalfire:
+    idle: wc1projectiles
+        Start: 24
+        Facings: -8
+        
+catapultfire:
+    idle: wc1projectiles
+        Start: 32
+        Facings: -8
+      
+rainoffire:
+    idle: wc1projectiles
+        Start: 36
+      
+spearfire:
+    idle: wc1projectiles
+        Start: 40
+        Facings: -8
+
+icon:
+	Defaults:
+		AddExtension: False
+    rainoffire_icon: rainoffire_icon.shp
+    poisoncloud_icon: poisoncloud_icon.shp
+    wc_far_seeing: wc_support_power_icon.shp
+        Start: 0
+    wc_dark_vision: wc_support_power_icon.shp
+        Start: 1

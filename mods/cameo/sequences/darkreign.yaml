@@ -1,0 +1,4210 @@
+^DRCommonInfantry:
+	Inherits: ^InfantryOverlays
+	# Shot
+	die1: drsplat1
+		Length: *
+	# Explode
+	die2: drsplat2
+		Length: *
+	# Fly and explode in air
+	die3: drsplat2
+		Length: *
+	# Fly through air squish on ground
+	die4: drsplat2
+		Length: *
+	# Burn
+	die5: drfiresplat
+		Length: *
+	# Tib
+	die6: drsplat1
+		Length: *
+	# Electro
+	die7: electro				##########
+		Length: *
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+
+^DRCreatureInfantry:
+	Inherits: ^InfantryOverlays
+	# Shot
+	die1: drsplat2
+		Length: *
+	# Explode
+	die2: drsplat2
+		Length: *
+	# Fly and explode in air
+	die3: drsplat2
+		Length: *
+	# Fly through air squish on ground
+	die4: drsplat2
+		Length: *
+	# Burn
+	die5: drsplat2
+		Length: *
+	# Tib
+	die6: drsplat2
+		Length: *
+	# Electro
+	die7: drsplat2				##########
+		Length: *
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+
+^DRCyborgInfantry:
+	Inherits: ^InfantryOverlays
+	# Shot
+	die1: drsplatbion
+		Length: *
+	# Explode
+	die2: drsplatbion
+		Length: *
+	# Fly and explode in air
+	die3: drsplatbion
+		Length: *
+	# Fly through air squish on ground
+	die4: drsplatbion
+		Length: *
+	# Burn
+	die5: drfiresplat
+		Length: *
+	# Tib
+	die6: drsplatbion
+		Length: *
+	# Electro
+	die7: drsplatbion				##########
+		Length: *
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+driweap:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-1
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-1
+	idle-bottom: driweap_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-1
+	damaged-idle-bottom: driweap_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-1
+	idle-top2: driweap2
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-1
+	damaged-idle-top2: driweap2
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-1
+	idle-bottom2: driweap2_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-1
+	damaged-idle-bottom2: driweap2_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-1
+	dead:
+		Start: 2
+	make:
+	icon: driweapicon
+		Offset: 0,0
+driweap2:
+	icon: driweap2icon
+
+drihq:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drihq_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drihq_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drihq2
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: drihq2
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: drihq2_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: drihq2_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top3: drihq3
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top3: drihq3
+		Start: 2
+		ZOffset: 1024
+	idle-bottom3: drihq3_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom3: drihq3_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drihq2icon
+		Offset: 0,0
+drthq:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drthq_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drthq_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drthq
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: drthq
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: drthq_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: drthq_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top3: drthq
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top3: drthq
+		Start: 2
+		ZOffset: 1024
+	idle-bottom3:drthq_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom3: drthq_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drihq2icon
+		Offset: 0,0
+
+drihq2:
+	icon: drihq2icon
+		Offset: 0,0
+
+drihq3:
+	icon: drihq3icon
+
+drterhq:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drterhq_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drterhq_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drterhq2
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: drterhq2
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: drterhq2_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: drterhq2_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top3: drterhq3
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top3: drterhq3
+		Start: 2
+		ZOffset: 1024
+	idle-bottom3: drterhq3_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom3: drterhq3_bib
+		Start: 2
+		ZOffset: -1024
+	idle-fan: drterhq_fan
+		Length: *
+		ZOffset: 1048
+	damaged-idle-fan: drterhq_fan
+		Length: *
+		ZOffset: 1048
+	idle-fan2: drterhq_fan2
+		Length: *
+		ZOffset: 1048
+	damaged-idle-fan2: drterhq_fan2
+		Length: *
+		ZOffset: 1048
+	dead:
+		Start: 2
+	make:
+	icon: drihq2icon
+		Offset: 0,0
+dribarr:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: dribarr_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: dribarr_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: dribarr2
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: dribarr2
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: dribarr2_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: dribarr2_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: dribarricon
+		Offset: 0,0
+dribarr2:
+	icon: dribarr2icon
+
+drihelipad:
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	active: invisibleitem
+	damaged-active: invisibleitem
+	dead: invisibleitem
+	make: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drihelipad_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drihelipad_bib
+		Start: 2
+		ZOffset: -1024
+	icon: drihpadicon
+driportal:
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	active: invisibleitem
+	damaged-active: invisibleitem
+	dead: invisibleitem
+	make: invisibleitem
+	bib: invisibleitem
+	idle-top: driportal
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: driportal
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: driportal_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: driportal_bib
+		Start: 2
+		ZOffset: -1024
+	icon: drportalicon
+drmatrix:
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	active: invisibleitem
+	damaged-active: invisibleitem
+	dead: invisibleitem
+	make: invisibleitem
+	bib: invisibleitem
+	idle-top: drmatrix
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: drmatrix
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drmatrix_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drmatrix_bib
+		Start: 2
+		ZOffset: -1024
+	idle-lights: drmatrix_lights
+		Length: *
+		ZOffset: 1048
+		Tick: 200
+	damaged-idle-lights: invisibleitem
+	icon: drmatrixicon
+dririft:
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	active: invisibleitem
+	damaged-active: invisibleitem
+	dead: invisibleitem
+	make: invisibleitem
+	bib: invisibleitem
+	idle-top: dririft
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: dririft
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: dririft_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: dririft_bib
+		Start: 2
+		ZOffset: -1024
+	icon: dririfticon
+
+drfghq:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drfghq_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drfghq_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drfghq2
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: drfghq2
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: drfghq2_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: drfghq2_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top3: drfghq3
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top3: drfghq3
+		Start: 2
+		ZOffset: 1024
+	idle-bottom3: drfghq3_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom3: drfghq3_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drhqicon
+		Offset: 0,0
+drfghq2:
+	icon: drfghq2icon
+
+drfghq3:
+	icon: drfghq3icon
+
+drfgweap:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drfgweap_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drfgweap_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drfgweap2
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-1
+	damaged-idle-top2: drfgweap2
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-1
+	idle-bottom2: drfgweap2_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-1
+	damaged-idle-bottom2: drfgweap2_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-1
+	dead:
+		Start: 2
+	make:
+	icon: drfgweapicon
+		Offset: 0,0
+drfgweap2:
+	icon: drfgweap2icon
+
+drdweap:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drdweap_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drdweap_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drfgweap2
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-6
+	damaged-idle-top2: drfgweap2
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-6
+	idle-bottom2: drdweap_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-6
+	damaged-idle-bottom2: drdweap_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-6
+	dead:
+		Start: 2
+	make:
+	icon: drdweapicon
+		Offset: 0,0
+drterweap:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drterweap_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drterweap_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drterweap
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-6
+	damaged-idle-top2: drterweap
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-6
+	idle-bottom2: drterweap_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-6
+	damaged-idle-bottom2: drterweap_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-6
+	dead:
+		Start: 2
+	make:
+	idle-liquid: drterweap_liquid
+		Length: *
+		ZOffset: 1048
+	damaged-idle-liquid: drterweap_liquid
+		Length: *
+		ZOffset: 1048
+	icon: drterweapicon
+		Offset: 0,0
+drdcamp:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+	damaged-idle-top:
+		Start: 2
+	idle-bottom: drdcamp
+		Start: 1
+	damaged-idle-bottom: drdcamp
+		Start: 2
+	idle-top2: drdcamp
+		Start: 1
+		Offset: 0,-1
+	damaged-idle-top2: drdcamp
+		Start: 2
+		Offset: 0,-1
+	idle-bottom2: drdcamp
+		Start: 1
+		Offset: 0,-1
+	damaged-idle-bottom2: drdcamp
+		Start: 2
+		Offset: 0,-1
+	dead:
+		Start: 2
+	make:
+	icon: drdcampicon
+		Offset: 0,0
+drdpower:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	dead:
+		Start: 2
+	make:
+	icon: drdpowericon
+		Offset: 0,0
+drdsupport:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	dead:
+		Start: 2
+	make:
+	icon: drdsupporticon
+		Offset: 0,0
+
+drterwaterl:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drterwaterl_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drterwaterl_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drterwaterlicon
+		Offset: 0,0
+driscrap:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	dead:
+		Start: 2
+	make:
+	icon: driscrapicon
+		Offset: 0,0
+drfgbarr:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drfgbarr_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drfgbarr_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drfgbarr2
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: drfgbarr2
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: drfgbarr2_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: drfgbarr2_bib
+		Start: 2
+		ZOffset: -1024
+	dead: invisibleitem
+	make: invisibleitem
+	icon: drfgbarricon
+		Offset: 0,0
+drfgbarr2:
+	icon: drfgbarr2icon
+
+drpplant1:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top: drpplant1
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: drpplant1
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drpplant1_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drpplant1_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drpplant2
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-1
+	damaged-idle-top2: drpplant2
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-1
+	idle-bottom2: drpplant2_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-1
+	damaged-idle-bottom2: drpplant2_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-1
+	dead:
+		Start: 2
+	make:
+	icon: drpplanticon
+		Offset: 0,0
+drpplant2:
+	icon: drpplant2icon
+drfgrep:
+	idle: drfgrep_bib
+		ZOffset: -1c511
+		Start: 1
+	damaged-idle: drfgrep_bib
+		Start: 2
+		ZOffset: -1c511
+	active: drfgrep_bib
+		Length: 1
+		ZOffset: -1c511
+	damaged-active: drfgrep_bib
+		Start: 2
+		ZOffset: -1c511
+	dead: drfgrep_bib
+		Start: 2
+		ZOffset: -1c511
+		Tick: 800
+	make:
+	idle-top: drfgrep
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: drfgrep
+		Start: 2
+		ZOffset: 1024
+	icon: drfgrepicon
+drirep:
+	idle: drirep_bib
+		ZOffset: -1c511
+		Start: 1
+	damaged-idle: drirep_bib
+		Start: 2
+		ZOffset: -1c511
+	active: drirep_bib
+		Length: 1
+		ZOffset: -1c511
+	damaged-active: drirep_bib
+		Start: 2
+		ZOffset: -1c511
+	dead: drirep_bib
+		Start: 2
+		ZOffset: -1c511
+		Tick: 800
+	make:
+	idle-top: drirep
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: drirep
+		Start: 2
+		ZOffset: 1024
+	icon: drirepicon
+drterrep:
+	idle: drterrep_bib
+		ZOffset: -1c511
+		Start: 1
+	damaged-idle: drterrep_bib
+		Start: 2
+		ZOffset: -1044
+	active: drterrep_bib
+		Length: 1
+		ZOffset: -1044
+	damaged-active: drterrep_bib
+		Start: 2
+		ZOffset: -1044
+	dead: drterrep_bib
+		Start: 2
+		ZOffset: -1044
+	make:
+	idle-bottom: drterrep_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drterrep_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top: drterrep
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: drterrep
+		Start: 2
+		ZOffset: 1024
+	idle-top2: drterrep2
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-6
+	damaged-idle-top2: drterrep2
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-6
+	idle-bottom2: drterrep2_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-6
+	damaged-idle-bottom2: drterrep2_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-6
+	icon: drterrepicon
+drihosp:
+	idle: drihosp_bib
+		ZOffset: -1c511
+		Start: 1
+	damaged-idle: drihosp_bib
+		Start: 2
+		ZOffset: -1c511
+	active: drihosp_bib
+		Length: 1
+		ZOffset: -1c511
+	damaged-active: drihosp_bib
+		Start: 2
+		ZOffset: -1c511
+	dead: drihosp_bib
+		Start: 2
+		ZOffset: -1c511
+		Tick: 800
+	make:
+	idle-top: drihosp
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: drihosp
+		Start: 2
+		ZOffset: 1024
+	icon: drihospicon
+drfghosp:
+	idle: drfghosp_bib
+		ZOffset: -1c511
+		Start: 1
+	damaged-idle: drfghosp_bib
+		Start: 2
+		ZOffset: -1c511
+	active: drfghosp_bib
+		Length: 1
+		ZOffset: -1c511
+	damaged-active: drfghosp_bib
+		Start: 2
+		ZOffset: -1c511
+	dead: drfghosp_bib
+		Start: 2
+		ZOffset: -1c511
+		Tick: 800
+	make:
+	idle-top: drfghosp
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: drfghosp
+		Start: 2
+		ZOffset: 1024
+	icon: drfghospicon
+drterhosp:
+	idle: drterhosp_bib
+		ZOffset: -1c511
+		Start: 1
+	damaged-idle: drterhosp_bib
+		Start: 2
+		ZOffset: -1c511
+	active: drterhosp_bib
+		Length: 1
+		ZOffset: -1c511
+	damaged-active: drterhosp_bib
+		Start: 2
+		ZOffset: -1c511
+	dead: drterhosp_bib
+		Start: 2
+		ZOffset: -1c511
+		Tick: 800
+	make:
+	idle-top: drterhosp
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top: drterhosp
+		Start: 2
+		ZOffset: 1024
+	icon: drterhospicon
+
+drbiocom:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drbiocom_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drbiocom_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drbiocom2
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-1
+	damaged-idle-top2: drbiocom2
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-1
+	idle-bottom2: drbiocom2_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-1
+	damaged-idle-bottom2: drbiocom2_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-1
+	dead:
+		Start: 2
+	make:
+	icon: drbiocomicon
+		Offset: 0,0
+drbiocom2:
+	icon: drbiocom2icon
+
+drfghelipad:
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	active: invisibleitem
+	damaged-active: invisibleitem
+	dead: invisibleitem
+	make: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drfghelipad_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drfghelipad_bib
+		Start: 2
+		ZOffset: -1024
+	icon: drfghpadicon
+drwaterl:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drwaterl_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drwaterl_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drwaterlicon
+		Offset: 0,0
+drpowr:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drpowr_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drpowr_bib
+		Start: 2
+		ZOffset: -1024
+	idle-lights: drpowr_lights
+		Length: *
+		ZOffset: 1048
+		Tick: 200
+	damaged-idle-lights: drpowr_lights
+		Length: *
+		ZOffset: 1048
+		Tick: 200
+	dead:
+		Start: 2
+	make:
+	icon: drpowricon
+		Offset: 0,0
+drtpower:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Length: *
+	damaged-idle:
+		Length: *
+	idle-top:
+		Length: *
+	damaged-idle-top:
+		Length: *
+	idle-bottom: drtpower_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drtpower_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drsolaricon
+		Offset: 0,0
+drterpower:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Length: *
+	damaged-idle:
+		Length: *
+	idle-top:
+		Length: *
+	damaged-idle-top:
+		Length: *
+	idle-bottom: drterpower_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drterpower_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drterpowericon
+		Offset: 0,0
+drlastur1:
+	idle: drlastur1
+		Start: 1
+	dead: drlastur1
+		Start: 2
+	make: drlastur1
+	turret: drlastur2
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drfglaserturicon
+drtflamer:
+	idle: drtflamer
+		Start: 1
+	dead: drtflamer
+		Start: 2
+	make: drtflamer
+	turret: drtflamertur
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drtflamericon
+drtsentry:
+	idle: drtsentry
+		Start: 1
+	dead: drtsentry
+		Start: 2
+	make: drtsentry
+	turret: drtsentrytur
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drsentryicon
+drtmissile:
+	idle: drtmissile
+		Start: 1
+	dead: drtmissile
+		Start: 2
+	make: drtmissile
+	turret: drtmissiletur
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drtmissileicon
+drflamerflame:
+	idle:
+		Length: *
+		ZOffset: 1023
+drplastur1:
+	idle: drplasmacannon
+		Start: 1
+	dead: drplasmacannon
+		Start: 2
+	make: drplasmacannon
+	turret: drplasmacannontur
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drplasmaturicon
+drterrturret:
+	idle: drterrturret
+		Start: 1
+	dead: drterrturret
+		Start: 2
+	make: drterrturret
+	turret: drterrturrettur
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drterturreticon
+drcamera:
+	idle: drcamera
+	dead: invisibleitem
+	make: invisibleitem
+	turret: invisibleitem
+	muzzle: invisibleitem
+	idle-top:
+		Start: 1
+	damaged-idle-top:
+		Start: 1
+	icon: drcameraicon
+
+draacannon1:
+	idle: draacannon1
+		Start: 1
+	dead: draacannon1
+		Start: 2
+	make: drlastur1
+	turret: draacannon2
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: draacannonicon
+
+drrailtur1:
+	idle: drrailtur1
+		Start: 1
+	dead: drrailtur1
+		Start: 2
+	make: drrailtur1
+	turret: drrailtur2
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drrailturreticon
+
+drneutronturret:
+	idle: drneutronturret
+		Start: 1
+	dead: drneutronturret
+		Start: 2
+	make: drneutronturret
+	turret: drneutronturrettur
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drneutronturreticon
+driaaturret:
+	idle: driaaturret
+		Start: 1
+	dead: driaaturret
+		Start: 2
+	make: driaaturret
+	turret: invisibleitem
+	muzzle: gunfire2
+		Length: *
+	icon: driaaturreticon
+
+drwall1:
+	Defaults:
+		Offset: -9,-12
+	idle: drwall1
+	damaged-idle: drwall1
+		Start: 1
+	critical-idle: drwall1
+		Start: 1
+	make:
+	dead:
+	icon: drwall1icon
+		Offset: 0,0
+drwall2:
+	Defaults:
+		Offset: -9,-12
+	idle: drwall2
+	damaged-idle: drwall2
+		Start: 1
+	critical-idle: drwall2
+		Start: 1
+	make:
+	dead:
+	icon: drwall2icon
+		Offset: 0,0
+drfence1:
+	Defaults:
+		Offset: -9,-12
+	idle: drwall1
+	damaged-idle: drwall1
+		Start: 1
+	critical-idle: drwall1
+		Start: 1
+	make:
+	dead:
+	icon: drwall1icon
+		Offset: 0,0
+drfence2:
+	Defaults:
+		Offset: -9,-12
+	idle: drwall2
+	damaged-idle: drwall2
+		Start: 1
+	critical-idle: drwall2
+		Start: 1
+	make:
+	dead:
+	icon: drwall2icon
+		Offset: 0,0
+drdissecator:
+	Defaults:
+		Offset: 0,-6
+	idle:
+	damaged-idle:
+		Start: 1
+		Length: *
+	make:
+	bib: bib3
+		Length: *
+		Offset: 0,0
+		UseTilesetExtension: true
+	active: invisibleitem
+	smoke: invisibleitem
+	damaged-active: invisibleitem
+	up: invisibleitem
+	down: invisibleitem
+
+drwaterextract:
+	Defaults:
+		Offset: 0,-6
+	idle:
+	damaged-idle:
+		Start: 1
+		Length: *
+	make:
+	dead:
+	bib: bib3
+		Length: *
+		Offset: 0,0
+		UseTilesetExtension: true
+	icon: drwaterextracticon
+
+drcivplant:
+	Defaults:
+		Offset: 0,-6
+	idle:
+	damaged-idle:
+		Start: 1
+		Length: *
+	make:
+	bib: bib3
+		Length: *
+		Offset: 0,0
+		UseTilesetExtension: true
+
+drshelter:
+	idle:
+
+drsubterrean:
+	idle:
+
+drfarm:
+	idle:
+
+drfarm2:
+	idle:
+
+drfarm3:
+	idle:
+
+drrural:
+	idle:
+
+drcomercial:
+	idle:
+
+drctech:
+	idle:
+
+drconcessionaire:
+	idle:
+
+drtents:
+	idle:
+
+drplasma1:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drplasma2:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drmedlaser:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drticktanklaser:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drvortexproyectile:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drnalpalmbullet:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drbigtwinlaser:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drenergybullet:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+drtmissilemissile:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+drneutron:
+	idle:
+		ZOffset: 1023
+
+drsmalllaser:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drtwinlaser:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drskirmishmiss:
+	idle:
+		Facings: 16
+		ZOffset: 1023
+
+drmadbullet:
+	idle:
+		Length: *
+
+drelectrobullet:
+	idle:
+		Length: *
+
+drtachbullet:
+	idle:
+		Length: *
+
+drscarab:
+	idle:
+		Facings: 16
+	idle-alt: drscarab
+		Start: 16
+		Facings: 4
+	muzzle: gunfire2
+		Length: *
+	icon: drscarabicon
+drscarabfake:
+	idle: drscarab
+		Facings: 16
+	idle-alt: drscarab
+		Start: 16
+		Facings: 4
+	muzzle: gunfire2
+		Length: *
+	icon: drscarabiconfake
+
+drscarab2:
+	idle: drscarab
+		Start: 16
+		Facings: 4
+	muzzle: gunfire2
+		Length: *
+	icon: artyicnh.tem
+		AddExtension: False
+
+drarty:
+	idle:
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drartyicon
+drtarty:
+	idle:
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drtartyicon
+drghazi:
+	idle:
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drghaziicon
+drphunisher:
+	idle:
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drphunishericon
+drgant:
+	Inherits: ^DRCreatureInfantry
+	idle:
+		Start: 80
+		Facings: 8
+	stand:
+		Start: 80
+		Facings: 8
+	turret:
+		Start: 88
+		Facings: 8
+	tattack:
+		Start: 96
+		Facings: 8
+		Length: 4
+	run:
+		Length: 10
+		Facings: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drganticon
+drgrendel:
+	Inherits: ^DRCreatureInfantry
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	turret:
+		Start: 88
+		Facings: 8
+	tattack:
+		Start: 88
+		Facings: 8
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drgrendelicon
+
+drgrider:
+	Inherits: ^DRCreatureInfantry
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	turret:
+		Start: 88
+		Facings: 8
+	tattack:
+		Start: 88
+		Facings: 8
+	run:
+		Start: 8
+		Length: 10
+		Facings: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drgridericon
+
+drsctnk:
+	idle:
+		Facings: 16
+	icon: drsctnkicon
+
+drmad:
+	idle:
+		Facings: 16
+	icon: drmadicon
+drmadd:
+	idle:
+		Facings: 16
+	icon: drmadicon
+drmadfake:
+	idle: drmad
+		Facings: 16
+	icon: drmadiconfake
+
+drrat:
+	idle:
+		Facings: 16
+	icon: drraticon
+
+drrat2:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drrat2icon
+drttransport:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drtgroundicon
+
+drphasetran:
+	idle:
+		Facings: 16
+		Length: 3
+	icon: ltnkicnh.tem
+		AddExtension: False
+
+drptnk:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle:
+		Start: 32
+		Facings: 16
+		Length: 3
+	icon: drptnkicon
+drptnkd:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle:
+		Start: 32
+		Facings: 16
+		Length: 3
+	icon: drptnkicon
+drptnkfake:
+	idle: drptnk
+		Facings: 16
+	turret: drptnk
+		Start: 16
+		Facings: 16
+	muzzle: drptnk
+		Start: 32
+		Facings: 16
+		Length: 3
+	icon: drptnkiconfake
+
+drfanboat:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drfanboaticon
+drtermcv:
+	idle:
+		Facings: 16
+	stand:
+	run:
+	die:
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle: invisibleitem
+	icon: drtermcvicon
+drntnk:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drntnkicon
+
+drimpapc:
+	idle:
+		Facings: 16
+	turret: drminilastur
+		Facings: 16
+	muzzle: invisibleitem
+	icon: drimpapcicon
+drimpapcfake:
+	idle: drimpapc
+		Facings: 16
+	turret: drminilastur
+		Facings: 16
+	muzzle: invisibleitem
+	icon: drimpapciconfake
+
+drgemenis1:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	idle-alt: drgemenis2
+		Facings: 16
+	turret-alt: drgemenis2
+		Start: 16
+		Facings: 16
+	muzzle: invisibleitem
+	icon: drgtnkicon.shp
+		AddExtension: False
+
+drgemenis2:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle: invisibleitem
+	icon: drgtnkicon.shp
+		AddExtension: False
+
+drrtnk:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+		Offset: 0,5
+	icon: drrtnkicon
+
+drttnk:
+	idle:
+		Facings: 16
+	turret:
+		Start: 16
+		Facings: 16
+	muzzle:
+		Start: 32
+		Facings: 16
+		Length: 2
+	icon: drttnkicon
+drttnkfake:
+	idle: drttnk
+		Facings: 16
+	turret: drttnk
+		Start: 16
+		Facings: 16
+	muzzle: drttnk
+		Start: 32
+		Facings: 16
+		Length: 2
+	icon: drttnkiconfake
+
+drfury:
+	idle:
+		Start: 80
+		Facings: 8
+	stand:
+		Start: 80
+		Facings: 8
+	turret:
+		Start: 88
+		Facings: 16
+	run:
+		Length: 10
+		Facings: 8
+        Tick: 150
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drfuryicon
+drsonic:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	run:
+		Length: 8
+		Facings: 8
+		Start: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drsonicicon
+drphasemine:
+	idle:
+	stand:
+	run:
+		Facings: 8
+		Start: 1
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drphasemineicon
+drstnk:
+	idle:
+		Start: 64
+		Facings: 16
+	stand:
+		Start: 64
+		Facings: 16
+	turret:
+		Start: 48
+		Facings: 16
+	run:
+		Length: 3
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drskirmishicon
+drmtnk:
+	idle:
+		Length: 3
+		Facings: 16
+		Tick: 9999
+	stand:
+		Length: 3
+		Facings: 16
+		Tick: 9999
+	turret:
+		Start: 48
+		Facings: 16
+	run:
+		Length: 3
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drmtnkicon
+drrig:
+	idle: drrig
+		Facings: 8
+	idle1: drrig
+	idle2: drrig
+	die1: drrig
+	die2: drrig
+	die3: drrig
+	die4: drrig
+	die5: drrig
+	die6: drrig
+	die7: drrig
+	die-crushed: drrig
+	stand: drrig
+		Facings: 8
+	run: drrig
+		Start: 8
+		Length: 6
+		Facings: 8
+        Tick: 100
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drrigicon
+drcbiot:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+        Tick: 100
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drcbioticon
+
+drticktank:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	turret:
+		Start: 56
+		Facings: 16
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+	muzzle:
+		Start: 72
+		Facings: 16
+	flying:
+		Start: 88
+		Length: 3
+		Facings: 8
+	icon: drticktankicon
+
+drtscout:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	turret:
+		Start: 56
+		Facings: 16
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	flying:
+		Start: 72
+		Facings: 16
+	icon: drtscouticon
+
+drvortextank:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	turret:
+		Start: 32
+		Facings: 16
+	turret-alt: drvortextanktur2
+		Facings: 16
+	run:
+		Start: 8
+		Length: 3
+		Facings: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drvortextankicon
+drflamedeath:
+	idle:
+		Start: 48
+		Facings: 8
+	stand:
+		Start: 48
+		Facings: 8
+	turret: drflamedeathtur
+		Facings: 16
+	run:
+		Length: 6
+		Facings: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drflamedeathicon
+drquake:
+	idle:
+		Facings: 16
+	stand:
+		Facings: 16
+	turret:
+		Start: 64
+		Facings: 16
+	run:
+		Start: 16
+		Length: 3
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drquakeicon
+
+dramp:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drampicon
+
+drspid:
+	idle:
+		Facings: 16
+	stand:
+		Facings: 16
+	run:
+		Start: 16
+		Length: 3
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	shoot:
+		Start: 64
+		Facings: 16
+	icon: drspidicon
+drskater:
+	idle:
+		Facings: 16
+	stand:
+		Facings: 16
+	run:
+		Start: 16
+		Length: 8
+		Facings: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	shoot:
+		Facings: 16
+	turret:
+		Start: 80
+		Facings: 16
+	icon: drskatericon
+
+drtnkh:
+	idle:
+		Facings: 16
+	stand:
+		Facings: 16
+	run:
+		Start: 16
+		Length: 3
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	shoot: invisibleitem
+	icon: drtnkhicon
+drhostage:
+	idle:
+		Length: 3
+		Facings: 16
+	stand:
+		Length: 3
+		Facings: 16
+	run:
+		Length: 3
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	shoot: invisibleitem
+	icon: drhostageicon
+
+drdrone:
+	idle:
+		Facings: 8
+	icon: drdroneicon
+
+drphasetnk:
+	idle:
+		Facings: 16
+	stand:
+		Facings: 16
+	run:
+		Start: 16
+		Length: 3
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	shoot: invisibleitem
+	icon: drphasetnkicon
+
+drguardian:
+	Inherits: ^DRCommonInfantry
+	Defaults:
+		Offset: 0,-4
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 56
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 56
+		Length: 2
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 120
+	idle3:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 120
+	icon: drguardianicon
+		Offset: 0,0
+drshok:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 56
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 56
+		Length: 2
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle2:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle3:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	icon: drshokicon
+		Offset: 0,0
+
+drbiocontrol:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 56
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 56
+		Length: 2
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle2:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle3:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	icon: drbiocontrolicon
+		Offset: 0,0
+
+drscout:
+	Inherits: ^DRCommonInfantry
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 8
+		Length: 8
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 8
+		Length: 8
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	idle3:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	icon: drscouticon
+
+drraid:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 56
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 56
+		Length: 2
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle2:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle3:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	icon: drraidicon
+
+drrasta:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 72
+		Length: 9
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 72
+		Length: 9
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	idle2:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	idle3:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	icon: drrastaicon
+drfatso:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Length: 6
+		Facings: 8
+		Tick: 9999
+	stand2:
+		Length: 6
+		Facings: 8
+		Tick: 9999
+	run:
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 48
+		Length: 4
+		Facings: 8
+	prone-stand:
+		Length: 6
+		Facings: 8
+		Tick: 9999
+	prone-stand2:
+		Length: 6
+		Facings: 8
+		Tick: 9999
+	prone-run:
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Length: 6
+		Facings: 8
+		Tick: 9999
+	# prone -> stand transition
+	standup:
+		Length: 6
+		Facings: 8
+		Tick: 9999
+	prone-shoot:
+		Start: 48
+		Length: 4
+		Facings: 8
+	idle1:
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle2:
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle3:
+		Length: 6
+		Facings: 8
+		Tick: 100
+	cheer:
+		Length: 6
+		Facings: 8
+		Tick: 9999
+	# Dancing
+	idle4:
+		Length: 6
+		Facings: 8
+		Tick: 100
+	deployed:
+		Start: 120
+		Facings: 8
+	deploy:
+		Start: 80
+		Length: 5
+		Facings: 8
+	shoot-deployed:
+		Start: 128
+		Facings: 8
+	undeploy:
+		Start: 80
+		Length: 5
+		Facings: 8
+	dot: invisibleitem
+		ZOffset: -9999
+	icon: drfatsoicon
+drsabot:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 72
+		Length: 6
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 72
+		Length: 6
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	idle2:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	idle3:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	icon: drsaboticon
+
+drsnipe:
+	Inherits: ^DRCommonInfantry
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle2:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle3:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	icon: drsnipeicon
+
+drmartyr:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Facings: 8
+	idle1:
+		Facings: 8
+	idle2:
+		Facings: 8
+	idle3:
+		Facings: 8
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Facings: 8
+	icon: drmartyricon
+
+drzombie:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Facings: 8
+	idle1:
+		Facings: 8
+	idle2:
+		Facings: 8
+	idle3:
+		Facings: 8
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Facings: 8
+	icon: e1icnh.tem
+		AddExtension: False
+
+drspy:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Facings: 8
+	idle1:
+		Start: 72
+		Length: 3
+		Facings: 4
+		Tick: 120
+	idle2:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	prone-shoot:
+		Facings: 8
+	icon: drinfiltratoricon
+
+drext:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 16
+	stand2:
+		Facings: 16
+	run:
+		Facings: 16
+	shoot:
+		Start: 16
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Facings: 16
+	prone-stand2:
+		Facings: 16
+	prone-run:
+		Facings: 16
+	# stand -> prone transition
+	liedown:
+		Facings: 16
+	# prone -> stand transition
+	standup:
+		Facings: 16
+	prone-shoot:
+		Start: 16
+		Length: 2
+		Facings: 8
+	idle1:
+		Start: 16
+		Length: 2
+		Facings: 8
+	idle2:
+		Start: 16
+		Length: 2
+		Facings: 8
+	idle3:
+		Facings: 16
+	cheer:
+		Facings: 16
+	# Dancing
+	idle4:
+		Facings: 16
+	icon: drexticon
+
+drbion:
+	Inherits: ^DRCyborgInfantry
+	Defaults:
+		Offset: 0,-4
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 96
+		Length: 8
+		Facings: 4
+		Tick: 120
+	idle3:
+		Start: 128
+		Length: 6
+		Facings: 4
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 72
+		Length: 3
+		Facings: 8
+		Tick: 120
+	icon: drbionicon
+		Offset: 0,0
+drbiond:
+	Inherits: ^DRCyborgInfantry
+	Defaults:
+		Offset: 0,-4
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 96
+		Length: 8
+		Facings: 4
+		Tick: 120
+	idle3:
+		Start: 128
+		Length: 6
+		Facings: 4
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 72
+		Length: 3
+		Facings: 8
+		Tick: 120
+	icon: drbionicon
+		Offset: 0,0
+
+drreaper:
+	Inherits: ^DRCyborgInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 72
+		Length: 4
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 72
+		Length: 4
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 72
+		Length: 4
+		Facings: 8
+		Tick: 120
+	idle3:
+		Start: 104
+		Length: 8
+		Facings: 8
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 72
+		Length: 4
+		Facings: 8
+		Tick: 120
+	icon: drreapericon
+
+drjack:
+	stand:
+		Start: 64
+		Facings: 8
+	stand2:
+		Start: 64
+		Facings: 8
+	run:
+		Length: 8
+		Facings: 8
+	shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	prone-stand:
+		Start: 64
+		Facings: 8
+	prone-stand2:
+		Start: 64
+		Facings: 8
+	prone-run:
+		Length: 8
+		Facings: 8
+	liedown:
+		Start: 64
+		Facings: 8
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	idle1:
+		Start: 64
+		Facings: 8
+	idle2:
+		Start: 64
+		Facings: 8
+	idle3:
+		Start: 64
+		Facings: 8
+	cheer:
+		Start: 64
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 64
+		Facings: 8
+	# Shot
+	die1: e1
+		Start: 381
+		Length: 9
+		Tick: 80
+	# Explode
+	die2: e1
+		Start: 390
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3: e1
+		Start: 398
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4: e1
+		Start: 406
+		Length: 12
+		Tick: 80
+	# Burn
+	die5: e1
+		Start: 418
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: e1
+		Start: 366
+		Length: 11
+		Tick: 80
+	# Electro
+	die7: electro				##########
+		Length: *
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: drflakjackicon
+
+drmercenary:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 56
+		Length: 2
+		Facings: 16
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 56
+		Length: 2
+		Facings: 16
+	idle1:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 120
+	idle3:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 88
+		Length: 11
+		Tick: 120
+	icon: drmercenaryicon
+
+drmech:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	repair:
+		Start: 72
+		Length: 3
+		Tick: 120
+	standup:
+		Facings: 8
+	idle:
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-run:
+		Facings: 8
+	icon: drmechicon
+drmedi:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	heal:
+		Facings: 8
+	standup:
+		Facings: 8
+	idle:
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-run:
+		Facings: 8
+	icon: drmediicon
+
+drarmciv:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 72
+		Length: 3
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	idle3:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 96
+		Length: 6
+		Facings: 8
+		Tick: 120
+	icon: drrowdyicon
+drjebradec:
+	Inherits: drarmciv
+	Defaults: drarmciv
+	icon: drjebradecicon
+
+
+drhades:
+	idle:
+		Facings: 16
+	icon: drhadesicon
+drspiner:
+	idle:
+		Facings: 16
+		Length: 3
+	icon: drspinericon
+drtertran:
+	idle:
+		Facings: 16
+	icon: drtertranicon
+drskyfort:
+	idle:
+		Facings: 8
+	icon: drskyforticon
+
+drempdisable:
+	idle:
+		Length: 8
+	icon: drempdisableicon
+drcyclone:
+	idle:
+		Facings: 16
+	icon: drcycloneicon
+
+drskybike:
+	idle:
+		Facings: 16
+	icon: drskybikeicon
+droutrider:
+	idle:
+		Facings: 16
+	icon: droutridericon
+
+dravenger:
+	idle:
+		Facings: 16
+	icon: dravengericon
+
+drsatanclawz:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 16
+	stand2:
+		Facings: 16
+	run:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	shoot:
+		Start: 128
+		Length: 6
+		Facings: 16
+	prone-stand:
+		Facings: 16
+	prone-stand2:
+		Facings: 16
+	prone-run:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 16
+	# prone -> stand transition
+	standup:
+		Facings: 16
+	prone-shoot:
+		Start: 128
+		Length: 6
+		Facings: 16
+	idle1:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	idle2:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	idle3:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	cheer:
+		Facings: 16
+	# Dancing
+	idle4:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	icon: e1icnh.tem
+		AddExtension: False
+
+drsatanglobi:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 16
+	stand2:
+		Facings: 16
+	run:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	shoot:
+		Start: 128
+		Length: 6
+		Facings: 16
+	prone-stand:
+		Facings: 16
+	prone-stand2:
+		Facings: 16
+	prone-run:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 16
+	# prone -> stand transition
+	standup:
+		Facings: 16
+	prone-shoot:
+		Start: 128
+		Length: 6
+		Facings: 16
+	idle1:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	idle2:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	idle3:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	cheer:
+		Facings: 16
+	# Dancing
+	idle4:
+		Start: 16
+		Length: 7
+		Facings: 16
+		Tick: 100
+	icon: e1icnh.tem
+		AddExtension: False
+
+drhoverfright:
+	idle:
+		Facings: 16
+	harvest:
+		Start: 16
+		Length: 15
+	dock:
+		Start: 16
+		Length: 15
+	dock-loop:
+		Start: 16
+		Length: 15
+	turret: drminilastur
+		Facings: 16
+	icon: drhoverfrighticon
+
+drfrigth:
+	idle:
+		Facings: 16
+	harvest:
+		Start: 16
+		Length: 15
+	dock:
+		Start: 16
+		Length: 15
+	dock-loop:
+		Start: 16
+		Length: 15
+	icon: drfrigthicon
+drtanker:
+	idle:
+		Length: 3
+		Facings: 16
+		Tick: 9999
+	harvest:
+		Length: 3
+		Facings: 16
+	stand:
+		Length: 3
+		Facings: 16
+		Tick: 9999
+	run:
+		Length: 3
+		Facings: 16
+	dock:
+		Length: 3
+		Facings: 16
+	dock-loop:
+		Start: 16
+		Length: 15
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drtankericon
+
+drshreder:
+	idle:
+		Facings: 16
+		Length: 4
+	icon: drshredericon
+drshrederfake:
+	idle: drshreder
+		Facings: 16
+		Length: 4
+	icon: drshredericonfake
+drshadowblade:
+	idle:
+		Facings: 16
+		Length: 4
+	icon: drshadowbladeicon
+
+drtrainer:
+	Inherits: ^DRCommonInfantry
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle1:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle2:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	idle3:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 6
+		Facings: 8
+		Tick: 100
+	icon: drtrainericon
+
+drfgmcv:
+	idle:
+		Facings: 16
+	icon: mcvicnh.tem
+		AddExtension: False
+	idle-overlay: customoverlay
+
+drgloth:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 3
+		Facings: 8
+        Tick: 100
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drglothicon
+drgloth2:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 3
+		Facings: 8
+        Tick: 100
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drgloth2icon
+
+drramnoth:
+	Inherits: ^DRCommonInfantry
+	Defaults:
+		Offset: 0,-4
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 40
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 40
+		Length: 2
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	idle3:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	icon: drramnothicon
+		Offset: 0,0
+drmamnoth:
+	Inherits: ^DRCommonInfantry
+	Defaults:
+		Offset: 0,-4
+	stand:
+		Facings: 8
+	stand2:
+		Facings: 8
+	run:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 40
+		Length: 1
+		Facings: 8
+	prone-stand:
+		Facings: 8
+	prone-stand2:
+		Facings: 8
+	prone-run:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 100
+	# stand -> prone transition
+	liedown:
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Facings: 8
+	prone-shoot:
+		Start: 40
+		Length: 1
+		Facings: 8
+	idle1:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	idle2:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	idle3:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 8
+		Length: 4
+		Facings: 8
+		Tick: 120
+	deploy:
+		Start: 48
+		Length: 1
+		Facings: 8
+	icon: drmamnothicon
+		Offset: 0,0
+drrelmnoth:
+	Inherits: ^DRCommonInfantry
+	Defaults:
+		Offset: 0,-4
+	stand:
+		Length: 4
+		Facings: 8
+	stand2:
+		Length: 4
+		Facings: 8
+	run:
+		Length: 4
+		Facings: 8
+		Tick: 100
+	shoot:
+		Start: 32
+		Length: 4
+		Facings: 8
+	prone-stand:
+		Length: 4
+		Facings: 8
+	prone-stand2:
+		Length: 4
+		Facings: 8
+	prone-run:
+		Length: 4
+		Facings: 8
+	# stand -> prone transition
+	liedown:
+		Length: 4
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Length: 4
+		Facings: 8
+	prone-shoot:
+		Start: 32
+		Length: 4
+		Facings: 8
+	idle1:
+		Start: 32
+		Length: 4
+		Facings: 8
+	idle2:
+		Start: 32
+		Length: 4
+		Facings: 8
+	idle3:
+		Start: 32
+		Length: 4
+		Facings: 8
+	cheer:
+		Facings: 8
+	# Dancing
+	idle4:
+		Start: 32
+		Length: 4
+		Facings: 8
+	icon: drrelmnothicon
+		Offset: 0,0
+drlynoth:
+	idle:
+		Facings: 8
+	icon: drlynothicon
+drcarrier:
+	idle:
+	icon: drcarriericon
+drblazer:
+	idle:
+		Facings: 8
+	move:
+		Start: 8
+		Facings: 8
+	icon: drblazericon
+drbomber:
+	idle:
+		Facings: 8
+	icon: drbombericon
+drthunder:
+	idle:
+		Facings: 8
+	icon: drthundericon
+drhealer:
+	idle:
+		Length: 8
+	icon: drhealericon
+drgather:
+	idle:
+		Facings: 8
+	harvest:
+		Length: 4
+		Start: 40
+	stand:
+		Facings: 8
+	run:
+		Length: 4
+		Facings: 8
+		Start: 8
+	dock:
+		Length: 4
+		Start: 40
+	dock-loop:
+		Length: 4
+		Start: 40
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drgathericon
+
+drdrednaut:
+	idle:
+		Facings: 8
+	turret: drminilastur
+		Facings: 16
+	muzzle: invisibleitem
+	icon: drdrednauticon
+drmissboat:
+	idle:
+		Facings: 8
+	turret:
+		Start: 8
+		Facings: 16
+		Offset: 0,5
+	muzzle: invisibleitem
+	icon: drmissboaticon
+drrouter:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	turret:
+		Start: 40
+		Facings: 8
+	run:
+		Start: 8
+		Length: 4
+		Facings: 8
+        Tick: 150
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drroutericon
+drmecha:
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	turret:
+		Start: 40
+		Facings: 8
+	run:
+		Start: 8
+		Length: 4
+		Facings: 8
+        Tick: 150
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drmechaicon
+drsalamander:
+	Inherits: ^DRCreatureInfantry
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	run:
+		Length: 4
+		Facings: 8
+		Start: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drsalamandericon
+drassimilator:
+	Inherits: ^DRCreatureInfantry
+	idle:
+		Facings: 8
+	stand:
+		Facings: 8
+	run:
+		Length: 4
+		Facings: 8
+		Start: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drassimilatoricon
+
+drmole:
+	idle:
+		Facings: 8
+	turret:
+		Start: 8
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drmoleicon
+drarunner:
+	idle:
+		Facings: 8
+	turret:
+		Start: 8
+		Facings: 16
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: drarunnericon
+drpboat:
+	idle:
+		Facings: 8
+	icon: drpboaticon
+
+drahq:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drahq_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drahq_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drahq2
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: drahq2
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: drahq2_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: drahq2_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top3: drahq3
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top3: drahq3
+		Start: 2
+		ZOffset: 1024
+	idle-bottom3: drahq3_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom3: drahq3_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drahqicon
+		Offset: 0,0
+drapower:
+	Defaults:
+		Offset: 0,-6
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom:
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom:
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drapowericon
+		Offset: 0,0
+drabarr:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: dribarr_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: dribarr_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: dribarr2
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: dribarr2
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: dribarr2_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: dribarr2_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: dribarricon
+		Offset: 0,0
+draweap:
+	Defaults:
+		Offset: 0,-1
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-1
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-1
+	idle-bottom: draweap_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-1
+	damaged-idle-bottom: draweap_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-1
+	idle-top2: draweap2
+		Start: 1
+		ZOffset: 1024
+		Offset: 0,-1
+	damaged-idle-top2: draweap2
+		Start: 2
+		ZOffset: 1024
+		Offset: 0,-1
+	idle-bottom2: draweap2_bib
+		Start: 1
+		ZOffset: -1024
+		Offset: 0,-1
+	damaged-idle-bottom2: draweap2_bib
+		Start: 2
+		ZOffset: -1024
+		Offset: 0,-1
+	dead:
+		Start: 2
+	make:
+	icon: draweapicon
+		Offset: 0,0
+drabarr:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top:
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top:
+		Start: 2
+		ZOffset: 1024
+	idle-bottom: drabarr_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drabarr_bib
+		Start: 2
+		ZOffset: -1024
+	idle-top2: drabarr
+		Start: 1
+		ZOffset: 1024
+	damaged-idle-top2: drabarr
+		Start: 2
+		ZOffset: 1024
+	idle-bottom2: drabarr_bib
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom2: drabarr_bib
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drabarricon
+		Offset: 0,0
+drlife:
+	Defaults:
+		Offset: 0,-6
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	idle-top: invisibleitem
+	damaged-idle-top: invisibleitem
+	idle-bottom: drlife
+		Start: 1
+		ZOffset: -1024
+	damaged-idle-bottom: drlife
+		Start: 2
+		ZOffset: -1024
+	dead:
+		Start: 2
+	make:
+	icon: drlifeicon
+		Offset: 0,0
+drbattery:
+	idle: drbattery
+		Start: 1
+	dead: drbattery
+		Start: 2
+	make: drbattery
+	turret: drbatterytur
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: drbatteryicon
+draplastur:
+	idle: draplastur
+		Start: 1
+	dead: draplastur
+		Start: 2
+	make: draplastur
+	turret: draplasturtur
+		Facings: 16
+	muzzle: gunfire2
+		Length: *
+	icon: draplasturicon
+drhive:
+	idle: invisibleitem
+	damaged-idle: invisibleitem
+	active: invisibleitem
+	damaged-active: invisibleitem
+	dead: invisibleitem
+	make: invisibleitem
+	idle-top:
+		Start: 1
+	damaged-idle-top:
+		Start: 2
+	idle-bottom: invisibleitem
+	damaged-idle-bottom: invisibleitem
+	icon: drhiveicon
+drnavyard:
+	idle:
+		Start: 1
+	damaged-idle:
+		Start: 2
+	make:
+	dead:
+		Start: 2
+	icon: drnavyardicon
+
+drdesrock1:
+	idle:
+
+drdesrock2:
+	idle:
+
+drdesrock3:
+	idle:
+
+drdesrock4:
+	idle:
+
+drdesrock5:
+	idle:
+
+drdesrock6:
+	idle:
+
+drtreedes00:
+	idle:
+
+drtreedes01:
+	idle:
+
+drtreedes02:
+	idle:
+
+drtreedes03:
+	idle:
+
+drtreedes04:
+	idle:
+
+drtreedes05:
+	idle:
+
+drtreejun00:
+	idle:
+
+drtreejun01:
+	idle:
+
+drtreejun02:
+	idle:
+
+drtreejun03:
+	idle:
+
+drtreejun04:
+	idle:
+
+drtreejun05:
+	idle:
+
+drbushdes00:
+	idle:
+
+drbushdes01:
+	idle:
+
+drbushdes02:
+	idle:
+
+drbushjun00:
+	idle:
+
+drbushjun01:
+	idle:
+
+drbushjun02:
+	idle:
+
+drtreesno00:
+	idle:
+
+drtreesno01:
+	idle:
+
+drtreesno02:
+	idle:
+
+drtreesno03:
+	idle:
+
+drtreesno04:
+	idle:
+
+drtreesno05:
+	idle:
+
+drbushsno00:
+	idle:
+
+drbushsno01:
+	idle:
+
+drbushsno02:
+	idle:

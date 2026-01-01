@@ -1,0 +1,1539 @@
+^BaseWorld:
+	AlwaysVisible:
+	Inherits: ^Palettes
+	ScreenMap:
+	ActorMap:
+	Selection:
+	MusicPlaylist:
+		VictoryMusic: tsscore
+		DefeatMusic: trouble2
+	DebugVisualizations:
+	TerrainRenderer:
+	TerrainGeometryOverlay:
+	ShroudRenderer:
+		ShroudVariants: typea, typeb, typec, typed
+		FogVariants: typea, typeb, typec, typed
+		OverrideFullShroud: full
+		OverrideFullFog: full
+	Locomotor@FOOT:
+		Name: foot
+		Crushes: mine, crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			ClearTemperat: 90		##########
+			ClearWinter: 90		##########
+			ClearJungle: 90		##########
+			ClearSnow: 90			##########
+			ClearDesert: 90		##########
+			ClearInterior: 90		##########
+            ClearDune: 90
+            Dune: 80		##########                        
+			Rough: 80
+            RoughDune: 70
+			Road: 100
+			Bridge: 100
+			Tiberium: 70
+				PathingCost: 300
+			BlueTiberium: 70
+				PathingCost: 300
+			RedTiberium: 70
+				PathingCost: 300
+			GoldTiberium: 70
+				PathingCost: 300
+			Beach: 80
+			Ore: 80
+			Gems: 80
+			SCMinerals: 40
+			Veins: 70
+            Spice: 80
+            Concrete: 100
+            Sand: 90		##########
+			SpiceSand: 90		##########
+			Transition: 80
+			ZergSoil: 90
+			Rails: 90
+	Locomotor@SWIM:
+		Name: swimsuit
+		Crushes: mine, crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			ClearTemperat: 90		##########
+			ClearWinter: 90		##########
+			ClearJungle: 90		##########
+			ClearSnow: 90			##########
+			ClearDesert: 90		##########
+			ClearInterior: 90		##########
+            ClearDune: 90
+            Dune: 80		##########                
+			Rough: 80
+			Road: 100
+			Bridge: 100
+			Tiberium: 70
+				PathingCost: 300
+			BlueTiberium: 70
+				PathingCost: 300
+			RedTiberium: 70
+				PathingCost: 300
+			GoldTiberium: 70
+				PathingCost: 300
+			Beach: 80
+			Ore: 80
+			Gems: 80
+			SCMinerals: 40
+			Veins: 70
+			Water: 80
+            Concrete: 100
+            Sand: 90		##########
+			SpiceSand: 90		##########
+			Transition: 80
+			Spice: 80
+			ZergSoil: 90
+			Rails: 90
+	Locomotor@CHEM:
+		Name: chem
+		Crushes: mine, crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			ClearTemperat: 90		
+			ClearWinter: 90		
+			ClearJungle: 90		
+			ClearSnow: 90			
+			ClearDesert: 90		
+			ClearInterior: 90		
+            ClearDune: 90
+            Dune: 80	                
+			Rough: 80
+			Road: 100
+			Bridge: 100
+			Tiberium: 90
+			BlueTiberium: 90
+			RedTiberium: 90
+			GoldTiberium: 90
+			Beach: 80
+			Ore: 80
+			Gems: 80
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 90		
+			SpiceSand: 90		
+			Transition: 80
+			Spice: 80
+			ZergSoil: 90
+			Rails: 90
+	Locomotor@WHEELED:
+		Name: wheeled
+		Crushes: mine, crate
+		TerrainSpeeds:
+			Clear: 80
+			ClearTemperat: 80		##########
+			ClearWinter: 80		##########
+			ClearJungle: 80		##########
+			ClearSnow: 80			##########
+			ClearDesert: 80		##########
+			ClearInterior: 80		##########
+            ClearDune: 80
+            Dune: 50                       
+			Rough: 50
+			Road: 100
+			Bridge: 100
+			Tiberium: 50
+			BlueTiberium: 50
+			RedTiberium: 50
+			GoldTiberium: 50
+			Beach: 50
+			Ore: 70
+			Gems: 70
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 80		
+			SpiceSand: 90		
+			Transition: 80
+			Spice: 80
+			ZergSoil: 80
+			Rails: 90
+	Locomotor@GLBike:
+		Name: glabike
+		Crushes: mine, crate
+		TerrainSpeeds:
+			Clear: 80
+			ClearTemperat: 80		##########
+			ClearWinter: 80		##########
+			ClearJungle: 80		##########
+			ClearSnow: 80			##########
+			ClearDesert: 80		##########
+			ClearInterior: 80		##########
+            ClearDune: 80
+            Dune: 50
+			Rough: 50
+            RoughDune: 40
+			Road: 100
+			Bridge: 100
+			Tiberium: 50
+			BlueTiberium: 50
+			RedTiberium: 50
+			GoldTiberium: 50
+			Beach: 50
+			Ore: 70
+			Gems: 70
+			SCMinerals: 40
+			Veins: 70
+			Rock: 50
+            Concrete: 100
+            Sand: 80		
+			SpiceSand: 80		
+			Transition: 80                           
+            Spice: 70
+			ZergSoil: 80
+			Rails: 80
+	Locomotor@HEAVYWHEELED:
+		Name: heavywheeled
+		Crushes: mine, crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+			ClearTemperat: 80		##########
+			ClearWinter: 80		##########
+			ClearJungle: 80		##########
+			ClearSnow: 80			##########
+			ClearDesert: 80		##########
+			ClearInterior: 80		##########
+            ClearDune: 80
+            Dune: 50
+			Rough: 50
+			Road: 100
+			Bridge: 100
+			Tiberium: 50
+			BlueTiberium: 50
+			RedTiberium: 50
+			GoldTiberium: 50
+			Beach: 50
+			Ore: 70
+			Gems: 70
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 80		
+			SpiceSand: 80		
+			Transition: 80    
+            Spice: 70
+			ZergSoil: 80
+			Rails: 80
+	Locomotor@LIGHTTRACKED:
+		Name: lighttracked
+		Crushes: wall, mine, crate
+		TerrainSpeeds:
+			Clear: 80
+			ClearTemperat: 80		##########
+			ClearWinter: 80		##########
+			ClearJungle: 80		##########
+			ClearSnow: 80			##########
+			ClearDesert: 80		##########
+			ClearInterior: 80		##########
+            ClearDune: 80		##########  
+            Dune: 50
+			Rough: 70
+			Road: 100
+			Bridge: 100
+			Ore: 70
+			Gems: 70
+			Beach: 70
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			GoldTiberium: 70
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 80		##########
+			SpiceSand: 80		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 80
+			Rails: 80
+	Locomotor@TRACKED:
+		Name: tracked
+		Crushes: wall, crate, infantry, mine
+		TerrainSpeeds:
+			Clear: 80
+			ClearTemperat: 80		##########
+			ClearWinter: 80		##########
+			ClearJungle: 80		##########
+			ClearSnow: 80			##########
+			ClearDesert: 80		##########
+			ClearInterior: 80		##########
+            ClearDune: 80		##########  
+            Dune: 50
+			Rough: 70
+			Road: 100
+			Bridge: 100
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			GoldTiberium: 70
+			Beach: 70
+			Ore: 70
+			Gems: 70
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+       		Sand: 80		##########
+			SpiceSand: 80		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 80
+			Rails: 80
+	Locomotor@HEAVYTRACKED:
+		Name: heavytracked
+		Crushes: wall, heavywall, crate, infantry, mine
+		TerrainSpeeds:
+			Clear: 80
+			ClearTemperat: 80		##########
+			ClearWinter: 80		##########
+			ClearJungle: 80		##########
+			ClearSnow: 80			##########
+			ClearDesert: 80		##########
+			ClearInterior: 80		##########
+            ClearDune: 80		##########     
+            Dune: 50    
+			Rough: 70
+			Road: 100
+			Bridge: 100
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			GoldTiberium: 70
+			Beach: 70
+			Ore: 70
+			Gems: 70
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 80		##########
+			SpiceSand: 80		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 80
+			Rails: 80
+	Locomotor@VEHICLECRUSHER:
+		Name: vehiclecrusher
+		Crushes: wall, heavywall, crate, infantry, mine, vehicle
+		TerrainSpeeds:
+			Clear: 80
+			ClearTemperat: 80		##########
+			ClearWinter: 80		##########
+			ClearJungle: 80		##########
+			ClearSnow: 80			##########
+			ClearDesert: 80		##########
+			ClearInterior: 80		##########
+            ClearDune: 80		##########      
+            Dune: 50    
+			Rough: 70
+			Road: 100
+			Bridge: 100
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			GoldTiberium: 70
+			Beach: 70
+			Ore: 70
+			Gems: 70
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 80		##########
+			SpiceSand: 80		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 80
+			Rails: 80
+	Locomotor@NAVAL:
+		Name: naval
+		Crushes: crate
+		TerrainSpeeds:
+			Water: 100
+	Locomotor@LANDINGCRAFT:
+		Name: lcraft
+		Crushes: crate, mine
+		TerrainSpeeds:
+			Clear: 100
+			ClearTemperat: 100		##########
+			ClearWinter: 100		##########
+			ClearJungle: 100		##########
+			ClearSnow: 100			##########
+			ClearDesert: 100		##########
+			ClearInterior: 100		##########
+            ClearDune: 100		##########      
+            Dune: 100
+			Rough: 100
+			Road: 100
+			Water: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			GoldTiberium: 100
+			Beach: 100
+			River: 100
+			Ore: 100
+			Gems: 100
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+         	Sand: 100		##########
+			SpiceSand: 100		##########
+			Transition: 100
+			Spice: 100
+			ZergSoil: 80
+			Rails: 90
+	Locomotor@CRITTER:
+		Name: critter
+		Crushes: crate, mine
+		TerrainSpeeds:
+			Clear: 90
+			ClearTemperat: 90		##########
+			ClearWinter: 90		##########
+			ClearJungle: 90		##########
+			ClearSnow: 90			##########
+			ClearDesert: 90		##########
+			ClearInterior: 90		##########
+            ClearDune: 90
+            Dune: 50   
+			Rough: 80
+			Road: 100
+			Bridge: 100
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			GoldTiberium: 70
+			Beach: 80
+			Ore: 70
+			Gems: 70
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 90		##########
+			SpiceSand: 90		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 90
+			Rails: 90
+	Locomotor@IMMOBILE:
+		Name: immobile
+		TerrainSpeeds:
+	Locomotor@HEROES:			##########
+		Name: heroes
+		Crushes: mine, crate
+		TerrainSpeeds:
+			Clear: 90
+			ClearTemperat: 90		##########
+			ClearWinter: 90		##########
+			ClearJungle: 90		##########
+			ClearSnow: 90			##########
+			ClearDesert: 90		##########
+			ClearInterior: 90		##########
+            ClearDune: 90
+            Dune: 80		##########                
+			Rough: 80
+            RoughDune: 70
+			Road: 100
+			Bridge: 100
+			Tiberium: 70
+				PathingCost: 300
+			BlueTiberium: 70
+				PathingCost: 300
+			RedTiberium: 70
+				PathingCost: 300
+			GoldTiberium: 70
+				PathingCost: 300
+			Beach: 80
+			Ore: 80
+			Gems: 80
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 90		##########
+			SpiceSand: 90		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 90
+			Rails: 90
+	Locomotor@HOVERS:
+		Name: hover
+		Crushes: wall, crate, mine
+		TerrainSpeeds:
+			Clear: 90
+			ClearTemperat: 90		##########
+			ClearWinter: 90		##########
+			ClearJungle: 90		##########
+			ClearSnow: 90			##########
+			ClearDesert: 90		##########
+			ClearInterior: 90		##########
+            ClearDune: 90
+            Dune: 60		##########                
+			Rough: 60
+            RoughDune: 50
+			Road: 98
+			Bridge: 98
+			Tiberium: 60
+			BlueTiberium: 60
+			RedTiberium: 60
+			GoldTiberium: 60
+			Beach: 80
+			Ore: 60
+			Gems: 60
+			River: 60
+			Water: 99
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 90		##########
+			SpiceSand: 90		##########
+			Transition: 80
+			Spice: 60
+			ZergSoil: 90
+			Rails: 90
+	Locomotor@DRINFHOV:
+		Name: drsuperhover
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			ClearTemperat: 90		##########
+			ClearWinter: 90		##########
+			ClearJungle: 90		##########
+			ClearSnow: 90			##########
+			ClearDesert: 90		##########
+			ClearInterior: 90		##########
+            ClearDune: 90
+            Dune: 60		##########                
+			Rough: 70
+            RoughDune: 60
+			Road: 98
+			Bridge: 98
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			GoldTiberium: 70
+			Beach: 80
+			Ore: 70
+			Gems: 70
+			River: 60
+			Water: 99
+			Rock: 15
+			SCMinerals: 40
+			Veins: 70
+            Concrete: 100
+            Sand: 90		##########
+			SpiceSand: 90		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 90
+			Rails: 90
+	Locomotor@FAKEAIRCRAFT:
+		Name: fakeaircraft
+		TerrainSpeeds:
+			Clear: 100
+			ClearTemperat: 100
+			ClearWinter: 100
+			ClearJungle: 100
+			ClearSnow: 100
+			ClearDesert: 100
+			ClearInterior: 100
+            ClearDune: 100		##########   
+            Dune: 100
+			Rough: 100
+			Road: 100
+			Bridge: 100
+            Cliff: 100
+            Ice: 100
+            Tree: 100
+            Wall: 100
+            ClearNoSmudges: 100
+            RoughDune: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			RedTiberium: 100
+			GoldTiberium: 100
+			Beach: 100
+			Ore: 100
+			Gems: 100
+			River: 100
+			Water: 100
+			Rock: 100
+			SCMinerals: 100
+			Veins: 100
+            Concrete: 100
+            Sand: 100		##########
+			SpiceSand: 100		##########
+			Transition: 100
+			Spice: 100
+			ZergSoil: 100
+			Rails: 100
+	Locomotor@AMPHIBIUS:
+		Name: amphibius
+		Crushes: wall, crate, infantry, mine
+		TerrainSpeeds:
+			Clear: 80
+			ClearTemperat: 80		##########
+			ClearWinter: 80		##########
+			ClearJungle: 80		##########
+			ClearSnow: 80			##########
+			ClearDesert: 80		##########
+			ClearInterior: 80		##########
+            ClearDune: 80		##########     
+            Dune: 50
+			Rough: 70
+			Road: 100
+			Bridge: 100
+			Tiberium: 70
+			BlueTiberium: 70
+			RedTiberium: 70
+			GoldTiberium: 70
+			Beach: 70
+			Ore: 70
+			Gems: 70
+			SCMinerals: 40
+			River: 30
+			Water: 50
+			Veins: 70
+            Concrete: 100
+            Sand: 80		##########
+			SpiceSand: 80		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 80
+			Rails: 80
+	SubterraneanLocomotor@SUBTERRANEAN:
+		Name: subterranean
+		Crushes: wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+				PathingCost: 150
+			ClearTemperat: 80		##########
+				PathingCost: 150
+			ClearWinter: 80		##########
+				PathingCost: 150
+			ClearJungle: 80		##########
+				PathingCost: 150
+			ClearSnow: 80			##########
+				PathingCost: 150
+			ClearDesert: 80		##########
+				PathingCost: 150
+			ClearInterior: 80		##########
+				PathingCost: 150
+            ClearDune: 80		##########
+				PathingCost: 150      
+            Dune: 80    
+                PathingCost: 150
+			Rough: 70
+				PathingCost: 150
+            RoughDune: 70
+				PathingCost: 150        
+			Road: 100
+				PathingCost: 150
+			Bridge: 100
+				PathingCost: 150
+			Ore: 70
+				PathingCost: 150
+			Gems: 70
+				PathingCost: 150
+			Beach: 70
+				PathingCost: 150
+			Tiberium: 70
+				PathingCost: 150
+			BlueTiberium: 70
+				PathingCost: 150
+			RedTiberium: 70
+				PathingCost: 150
+			GoldTiberium: 70
+				PathingCost: 150
+			SCMinerals: 40
+				PathingCost: 150
+			Veins: 70
+				PathingCost: 150
+			Subterranean: 120
+            Concrete: 100
+            Sand: 80		##########
+			SpiceSand: 80		##########
+			Transition: 80
+			Spice: 70
+			ZergSoil: 80
+			Rails: 80
+		SubterraneanTransitionTerrainTypes: Clear, ClearTemperat, ClearWinter, ClearJungle, ClearSnow, ClearDesert, ClearInterior, Rough, Road, Beach, Tiberium, BlueTiberium, RedTiberium, GoldTiberium, Ore, Gems, SCMinerals, Concrete, SpiceSand, Sand
+		SubterraneanTransitionCost: -5
+	Locomotor@Train:
+		Name: train
+		Crushes: mine, crate
+		SharesCell: false
+		TerrainSpeeds:
+			Rails: 100
+    SubterraneanLocomotor@WORMSUB:
+   		Name: sandwormsub
+		TerrainSpeeds:
+			Clear: 100				
+			ClearTemperat: 100		##########				
+			ClearWinter: 100		##########				
+			ClearJungle: 100		##########				
+			ClearSnow: 100			##########				
+			ClearDesert: 100		##########				
+			ClearInterior: 100		##########				
+			Rough: 100				
+			Bridge: 100				
+			Ore: 100				
+			Gems: 100
+			Beach: 100				
+			Tiberium: 100				
+			BlueTiberium: 100				
+			RedTiberium: 100				
+			GoldTiberium: 100				
+			SCMinerals: 100				
+			Veins: 100
+            Sand: 80		##########
+			SpiceSand: 80		########## 
+            Dune: 100
+            Spice: 100
+			ZergSoil: 50
+    SubterraneanLocomotor@sandwormtleilaxu:
+        Name: sandwormtleilaxu
+        TerrainSpeeds:
+			Clear: 100				
+			ClearTemperat: 100		##########				
+			ClearWinter: 100		##########				
+			ClearJungle: 100		##########				
+			ClearSnow: 100			##########				
+			ClearDesert: 100		##########				
+			ClearInterior: 100		##########				
+			Rough: 100				
+			Bridge: 100				
+			Ore: 100				
+			Gems: 100
+			Beach: 100				
+			Tiberium: 100				
+			BlueTiberium: 100				
+			RedTiberium: 100				
+			GoldTiberium: 100				
+			SCMinerals: 100				
+			Veins: 100
+            Sand: 80		##########
+			SpiceSand: 80		########## 
+            Spice: 100 
+            ClearDune: 100
+            Dune: 100
+            Concrete: 100
+			ZergSoil: 50
+	JumpjetLocomotor@JUMPJET:
+		Name: jumpjet
+		Crushes: crate
+		SharesCell: true
+		JumpjetTransitionCost: -5
+		TerrainSpeeds:
+			Clear: 80
+				PathingCost: 150
+			ClearTemperat: 80		##########
+				PathingCost: 150
+			ClearWinter: 80		##########
+				PathingCost: 150
+			ClearJungle: 80		##########
+				PathingCost: 150
+			ClearSnow: 80			##########
+				PathingCost: 150
+			ClearDesert: 80		##########
+				PathingCost: 150
+			ClearInterior: 80		##########
+				PathingCost: 150                   
+            ClearDune: 80		##########
+				PathingCost: 150     
+            Dune: 60    
+                PathingCost: 150
+			Rough: 70
+				PathingCost: 150
+			Road: 100
+				PathingCost: 150
+			Bridge: 100
+				PathingCost: 150
+			Ore: 70
+				PathingCost: 150
+			Gems: 70
+				PathingCost: 150
+			Beach: 70
+				PathingCost: 150
+			Tiberium: 70
+				PathingCost: 150
+			BlueTiberium: 70
+				PathingCost: 150
+			RedTiberium: 70
+				PathingCost: 150
+			GoldTiberium: 70
+				PathingCost: 150
+			SCMinerals: 40
+				PathingCost: 150
+			Veins: 70
+				PathingCost: 150
+			River: 30
+				PathingCost: 150
+			Water: 30
+				PathingCost: 150
+			Jumpjet: 130
+            Concrete: 100
+            Sand: 80		##########
+				PathingCost: 150
+			SpiceSand: 80		##########
+				PathingCost: 150
+			Transition: 80
+			Spice: 70
+				PathingCost: 150
+			ZergSoil: 80
+	JumpjetLocomotor@JUMPJETVEHICLE:
+		Name: jumpjetv
+		Crushes: crate
+		JumpjetTransitionCost: -15
+		TerrainSpeeds:
+			Clear: 80
+				PathingCost: 150
+			ClearTemperat: 80		##########
+				PathingCost: 150
+			ClearWinter: 80		##########
+				PathingCost: 150
+			ClearJungle: 80		##########
+				PathingCost: 150
+			ClearSnow: 80			##########
+				PathingCost: 150
+			ClearDesert: 80		##########
+				PathingCost: 150
+			ClearInterior: 80		##########
+				PathingCost: 150 
+            ClearDune: 80		##########
+				PathingCost: 150         
+            Dune: 60     
+                PathingCost: 150
+			Rough: 70
+				PathingCost: 150
+			Road: 100
+				PathingCost: 150
+			Bridge: 100
+				PathingCost: 150
+			Ore: 70
+				PathingCost: 150
+			Gems: 70
+				PathingCost: 150
+			Beach: 70
+				PathingCost: 150
+			Tiberium: 70
+				PathingCost: 150
+			BlueTiberium: 70
+				PathingCost: 150
+			RedTiberium: 70
+				PathingCost: 150
+			GoldTiberium: 70
+				PathingCost: 150
+			SCMinerals: 40
+				PathingCost: 150
+			Veins: 70
+				PathingCost: 150
+			River: 30
+				PathingCost: 150
+			Water: 30
+				PathingCost: 150
+			Jumpjet: 130
+            Concrete: 100
+            Sand: 80		##########
+				PathingCost: 150
+			SpiceSand: 80		##########
+				PathingCost: 150
+			Transition: 80
+			Spice: 70
+				PathingCost: 150
+			ZergSoil: 80
+	FactionCA@Random:
+		Name: Any
+		InternalName: Random
+		RandomFactionMembers: RandomSpecial, RandomBoss, Randomcnc&ra, RandomAW, RandomDR, RandomDT, RandomDOW, RandomDU, RandomD2, Randomcncg, RandomGSW, Randomra, Randomra2, RandomCity, RandomSC, RandomSW, RandomTA, Randomcnc, RandomTS, RandomWC, RandomWC2, RandomWZ
+		Game: Generic
+        Side: Random
+		Description: Random Faction\nA random faction from any game will be chosen when the game starts.\nSpecial and Challenge factions are excluded!
+	FactionCA@Randomcnc&ra:
+		Name: TD & RA
+		InternalName: Randomcnc&ra
+		RandomFactionMembers: gdi, nod, modsteel, modblackhand, chemnod, stealthnod, nodscavenger, gdispecialf, iok, gdiallies, allies, soviet, modengland, modgermany, modfrance, modusa, modgreek, modrussia, modukraine, modirak, modchina, modjapan, camea
+        Game: Generic
+		Side: Random
+		Description: Random Faction\nA random faction from TD or RA will be chosen when the game starts.
+    FactionCA@custom:
+		Name: Custom
+		InternalName: custom
+		Game: Special  
+		Side: Combined
+		Description: Customize each Queue with an existing Faction Queue for your unique playstyle.\nTS factions currently not supported.
+	FactionCA@RandomSpecial:
+		Name: Any
+		InternalName: RandomSpecial
+		RandomFactionMembers: wolfestein3d, win98, infection, xmas, valentine, halloween, sow, worms, plymouthl, zrobots, modants, vordel
+		Game: Special  
+		Side: Random
+		Description: Random Faction\nA random special faction from will be chosen when the game starts.
+	FactionCA@Boss:
+		Name: Any
+		InternalName: RandomBoss
+		RandomFactionMembers: actibliz, camea, emperor, leang
+		Game: Boss  
+		Side: Random
+		Description: Random Faction\nA random boss faction from will be chosen when the game starts.
+
+	ResourceType@green-tib:
+		Type: Tiberium
+		Name: Tiberium
+		PipColor: Green
+		ResourceType: 1
+		Palette: staticterrain
+		TerrainType: Tiberium
+		Sequences: ti1,ti2,ti3,ti4,ti5,ti6,ti7,ti8,ti9,ti10,ti11,ti12
+		MaxDensity: 15
+		ValuePerUnit: 50
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,ClearInterior,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@blue-tib:
+		Type: BlueTiberium
+		Name: Blue Tiberium
+		PipColor: Blue
+		ResourceType: 2
+		Palette: bluetiberium
+		TerrainType: BlueTiberium
+		Sequences: bti1,bti2,bti3,bti4,bti5,bti6,bti7,bti8,bti9,bti10,bti11,bti12
+		MaxDensity: 20
+		ValuePerUnit: 100
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,ClearInterior,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@red-tib:
+		Type: RedTiberium
+		Name: Red Tiberium
+		PipColor: Red
+		ResourceType: 5
+		Palette: redtiberium
+		TerrainType: RedTiberium
+		Sequences: rti1,rti2,rti3,rti4,rti5,rti6,rti7,rti8,rti9,rti10,rti11,rti12
+		MaxDensity: 25
+		ValuePerUnit: 150
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@gold-tib:
+		Type: GoldTiberium
+		Name: Gold Tiberium
+		PipColor: Yellow
+		ResourceType: 6
+		Palette: goldtiberium
+		TerrainType: GoldTiberium
+		Sequences: gti1,gti2,gti3,gti4,gti5,gti6,gti7,gti8,gti9,gti10,gti11,gti12
+		MaxDensity: 30
+		ValuePerUnit: 200
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@ore:
+		Type: Ore
+		Name: Valuable Minerals
+		PipColor: Yellow
+		ResourceType: 3
+		TerrainType: Ore
+		Palette: terrain				#player
+		Sequences: gold01,gold02,gold03,gold04
+		MaxDensity: 30
+		ValuePerUnit: 30
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@gem:
+		Type: Gems
+		Name: Valuable Minerals
+		PipColor: Red
+		ResourceType: 4
+		TerrainType: Gems
+		Palette: terrain				#player
+		Sequences: gem01,gem02,gem03,gem04
+		MaxDensity: 30
+		ValuePerUnit: 300
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@scmineral:
+		Type: SCMinerals
+		Name: Minerals
+		PipColor: Blue
+		ResourceType: 7
+		TerrainType: SCMinerals
+		Palette: terrain				#player
+		Sequences: scmin01,scmin03,scmin02
+		MaxDensity: 1000
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: false
+	ResourceType@tsveins:
+		Type: Veins
+		Name: Veins
+		PipColor: Yellow
+		ResourceType: 8
+		TerrainType: Veins
+		Palette: terrain				#player
+		Sequences: tsveins
+		MaxDensity: 1
+		ValuePerUnit: 15
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@gecrates:
+		Type: GESupplies
+		Name: Supply Crates
+		PipColor: Yellow
+		ResourceType: 9
+		TerrainType: Ore
+		Palette: terrain				#player
+		Sequences: gencrate1,gencrate2,gencrate3,gencrate4,gencrate5,gencrate6,gencrate7,gencrate8,gencrate9,gencrate10,gencrate11,gencrate12,gencrate13,gencrate14,gencrate15,gencrate16,gencrate17,gencrate18
+		MaxDensity: 50
+		ValuePerUnit: 50
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,ClearDune,ZergSoil		##########
+		AllowUnderActors: false
+	ResourceType@swpcarbon:
+		Type: SWPCarbon
+		Name: Stacked Carbon
+		PipColor: Blue
+		ResourceType: 10
+		TerrainType: SCMinerals
+		Palette: terrain				#player
+		Sequences: swpcarbon1,swpcarbon2,swpcarbon3,swpcarbon4,swpcarbon5,swpcarbon6,swpcarbon7
+		MaxDensity: 100
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@swrcarbon:
+		Type: SWRCarbon
+		Name: Rock Carbon
+		PipColor: Blue
+		ResourceType: 11
+		TerrainType: SCMinerals
+		Palette: terrain				#player
+		Sequences: swrcarbon1,swrcarbon2,swrcarbon3,swrcarbon4,swrcarbon5,swrcarbon6,swrcarbon7,swrcarbon8,swrcarbon9,swrcarbon10
+		MaxDensity: 250
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@swdcarbon:
+		Type: SWDCarbon
+		Name: Rock Carbon
+		PipColor: Blue
+		ResourceType: 12
+		TerrainType: SCMinerals
+		Palette: terrain				#player
+		Sequences: swdcarbon1,swdcarbon2,swdcarbon3,swdcarbon4,swdcarbon5,swdcarbon6,swdcarbon7,swdcarbon8,swdcarbon9
+		MaxDensity: 250
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@swpnova:
+		Type: SWPNova
+		Name: Stacked Nova Crystals
+		PipColor: Green
+		ResourceType: 13
+		TerrainType: Tiberium
+		Palette: terrain				#player
+		Sequences: swpnova1,swpnova2,swpnova3,swpnova4,swpnova5,swpnova6,swpnova7,swpnova8,swpnova9,swpnova10
+		MaxDensity: 100
+		ValuePerUnit: 50
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@swcnova:
+		Type: SWCNova
+		Name: Nova Crystals
+		PipColor: Green
+		ResourceType: 14
+		TerrainType: Tiberium
+		Palette: terrain				#player
+		Sequences: swcnova1,swcnova2,swcnova3,swcnova4,swcnova5,swcnova6,swcnova7,swcnova8,swcnova9,swcnova10
+		MaxDensity: 250
+		ValuePerUnit: 50
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@swpmin:
+		Type: SWPMin
+		Name: Stacked Minerals
+		PipColor: Red
+		ResourceType: 15
+		TerrainType: Gems
+		Palette: swminerals
+		Sequences: swpmin1,swpmin2,swpmin3,swpmin4,swpmin5,swpmin6,swpmin7,swpmin8,swpmin9,swpmin10
+		MaxDensity: 100
+		ValuePerUnit: 50
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@swcmin:
+		Type: SWCMin
+		Name: Minerals
+		PipColor: Red
+		ResourceType: 16
+		TerrainType: Gems
+		Palette: swminerals
+		Sequences: swmin1,swmin2,swmin3,swmin4,swmin5,swmin6,swmin7,swmin8
+		MaxDensity: 200
+		ValuePerUnit: 50
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@Spice:
+        Type: Spice
+        Name: Spice
+        ResourceType: 17
+        Palette: staticterrain
+        TerrainType: Spice
+        Sequences: spice, spice2
+        MaxDensity: 20
+        ValuePerUnit: 25
+        AllowedTerrainTypes: SpiceSand
+        AllowUnderActors: true
+	ResourceType@green-tib-zelda:
+		Type: ZeldaTiberium
+		Name: Rupees Tiberium
+		PipColor: Green
+		ResourceType: 18
+		Palette: staticterrain
+		TerrainType: Tiberium
+		Sequences: zeldarupee
+		MaxDensity: 12
+		ValuePerUnit: 35
+        AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,ClearInterior,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@blue-tib-zelda:
+		Type: ZeldaBlueTiberium
+		Name: Blue Rupees Tiberium
+		PipColor: Blue
+		ResourceType: 19
+		Palette: bluetiberium
+		TerrainType: BlueTiberium
+		Sequences: zeldarupeeblue
+		MaxDensity: 12
+		ValuePerUnit: 60
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,ClearInterior,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@red-tib-zelda:
+		Type: ZeldaRedTiberium
+		Name: Red Rupees Tiberium
+		PipColor: Red
+		ResourceType: 20
+		Palette: redtiberium
+		TerrainType: RedTiberium
+		Sequences: zeldarupeered
+		MaxDensity: 12
+		ValuePerUnit: 100
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@vespenegas-1:
+		Type: SCGas
+		Name: Vespene Gas Capsule
+		PipColor: Green
+		ResourceType: 21
+		Palette: terrain
+		TerrainType: Tiberium
+		Sequences: scgas1
+		MaxDensity: 11
+		ValuePerUnit: 50
+        AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,ClearInterior,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@vespenegas-2:
+		Type: SCGas2
+		Name: Vespene Gas Capsule
+		PipColor: Green
+		ResourceType: 22
+		Palette: terrain
+		TerrainType: Tiberium
+		Sequences: scgas2
+		MaxDensity: 11
+		ValuePerUnit: 50
+        AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,ClearInterior,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@vespenegas-3:
+		Type: SCGas3
+		Name: Vespene Gas Capsule
+		PipColor: Green
+		ResourceType: 23
+		Palette: terrain
+		TerrainType: Tiberium
+		Sequences: scgas3
+		MaxDensity: 11
+		ValuePerUnit: 50
+        AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,ClearInterior,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@scmineral-2:
+		Type: SCMineralsChunk
+		Name: Mineral Chunk
+		PipColor: Blue
+		ResourceType: 24
+		TerrainType: SCMinerals
+		Palette: terrain				#player
+		Sequences: scminchunk
+		MaxDensity: 5
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: false
+	ResourceType@scrichmineral:
+		Type: SCRMinerals
+		Name: Rich Minerals
+		PipColor: Blue
+		ResourceType: 25
+		TerrainType: GoldTiberium
+		Palette: terrain				#player
+		Sequences: scrmin01,scrmin02,scrmin03
+		MaxDensity: 1200
+		ValuePerUnit: 40
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: false
+	ResourceType@drwaterpool:
+		Type: DRWater
+		Name: Pure Water Well
+		PipColor: Blue
+		ResourceType: 26
+		TerrainType: SCMinerals
+		Palette: terrain				#player
+		Sequences: drwaterpool
+		MaxDensity: 9999
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@drtaelon:
+		Type: DRTaelon
+		Name: Taelon Crystals
+		PipColor: Green
+		ResourceType: 27
+		Palette: staticterrain
+		TerrainType: Tiberium
+		Sequences: drtaelon
+		MaxDensity: 9999
+		ValuePerUnit: 35
+        AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,ClearInterior,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@farmcrops:
+		Type: FarmCrops
+		Name: Collectable Crops
+		PipColor: Yellow
+		ResourceType: 28
+		TerrainType: Ore
+		Palette: terrain				#player
+		Sequences: farmcrops
+		MaxDensity: 12
+		ValuePerUnit: 15
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@farmbushes:
+		Type: FarmBush
+		Name: Collectable Fruit Bushes
+		PipColor: Yellow
+		ResourceType: 29
+		TerrainType: Ore
+		Palette: terrain				#player
+		Sequences: farmbushes
+		MaxDensity: 12
+		ValuePerUnit: 15
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: false
+	ResourceType@D2Spice:
+        Type: D2Spice
+        Name: Spice
+        ResourceType: 30
+        Palette: terrain
+        TerrainType: Spice
+        Sequences: dune2spice
+        MaxDensity: 30
+        ValuePerUnit: 25
+        AllowedTerrainTypes: SpiceSand, Sand
+        AllowUnderActors: true
+	ResourceType@D2SpiceDense:
+        Type: D2SpiceDense
+        Name: Spice
+        ResourceType: 31
+        Palette: terrain
+        TerrainType: Spice
+        Sequences: dune2spice
+        MaxDensity: 50
+        ValuePerUnit: 30
+        AllowedTerrainTypes: SpiceSand, Sand
+        AllowUnderActors: true
+	ResourceType@swfarms:
+		Type: SWFarms
+		Name: Farm
+		PipColor: Yellow
+		ResourceType: 32
+		TerrainType: Ore
+		Palette: terrain				#player
+		Sequences: swfarm01
+		MaxDensity: 32
+		ValuePerUnit: 15
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@OP2Ore:
+		Type: OP2Ore
+		Name: Common Ore
+		PipColor: Yellow
+		ResourceType: 33
+		TerrainType: Ore
+		Palette: terrain				#player
+		Sequences: op2minerals
+		MaxDensity: 50
+		ValuePerUnit: 35
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+	ResourceType@OP2Ore2:
+		Type: OP2Ore2
+		Name: Rare Ore
+		PipColor: Yellow
+		ResourceType: 34
+		TerrainType: Ore
+		Palette: terrain				#player
+		Sequences: op2minerals2
+		MaxDensity: 50
+		ValuePerUnit: 65
+		AllowedTerrainTypes: Clear,ClearTemperat,ClearWinter,ClearJungle,ClearSnow,ClearDesert,Road,Sand,SpiceSand,ClearDune,ZergSoil		##########
+		AllowUnderActors: true
+World:
+	Inherits: ^BaseWorld
+	ChatCommands:
+	DevCommands:
+	DebugVisualizationCommands:
+	PlayerCommands:
+	HelpCommand:
+	ScreenShaker:
+	BuildingInfluence:
+	LegacyBridgeLayer:
+		Bridges: bridge1, bridge2, bridge3, bridge4
+	ProductionQueueFromSelection:
+		ProductionTabsWidget: PRODUCTION_TABS
+    ActorSpawnManager:
+		Actors: sandworm
+    MapCreeps:
+		CheckboxLabel: Creeps
+		CheckboxDescription: Some Maps may contain hostile entities
+		CheckboxDisplayOrder: 21   
+        CheckboxEnabled: False
+	DomainIndex:
+	SmudgeLayer@SCORCH:
+		Type: Scorch
+		Sequence: scorches
+		SmokePercentage: 50
+	SmudgeLayer@CRATER:
+		Type: Crater
+		Sequence: craters
+	ResourceLayer:
+    	RecalculateResourceDensity: true
+		ResourceTypes:
+			Spice:
+				ResourceIndex: 1
+				TerrainType: Spice
+				AllowedTerrainTypes: SpiceSand
+				MaxDensity: 20
+	ResourceRenderer:
+		RenderTypes: Tiberium, BlueTiberium, RedTiberium, GoldTiberium, Ore, Gems, SCMinerals, Veins, GESupplies, SWPCarbon, SWRCarbon, SWDCarbon, SWPNova, SWCNova, SWPMin, SWCMin, Spice, ZeldaTiberium, ZeldaBlueTiberium, ZeldaRedTiberium, SCGas, SCGas2, SCGas3, SCMineralsChunk, SCRMinerals, DRWater, DRTaelon, FarmCrops, FarmBush, D2Spice, D2SpiceDense, SWFarms, OP2Ore2, OP2Ore
+    #D2kResourceRenderer:
+    #    RenderTypes: Spice
+	BuildableTerrainLayer:
+    ResourceClaimLayer:
+	TintedCellsLayer@ra2rad:
+		ZOffset: 0
+		Brightest: 80
+		FadeoutDelay: 400
+		Name: ra2radiation
+	TintedCellsLayer@tibrad:
+		Color: 00B300
+		MaxLevel: 750
+		ZOffset: 0
+		Brightest: 70
+		Name: tibradiation
+	TintedCellsLayer@generalsrad:
+		Color: FF7C00
+		ZOffset: 0
+		Brightest: 80
+		FadeoutDelay: 400
+		Name: genradiation
+	TintedCellsLayer@anthraxgreen:
+		Color: 8FFF00
+		ZOffset: 0
+		Brightest: 80
+		FadeoutDelay: 300
+		Name: anthraxgreen
+	TintedCellsLayer@anthraxblue:
+		Color: 0068FF
+		ZOffset: 0
+		Brightest: 80
+		FadeoutDelay: 300
+		Name: anthraxblue
+	TintedCellsLayer@anthraxpurple:
+		Color: 7400FF
+		ZOffset: 0
+		Brightest: 80
+		FadeoutDelay: 300
+		Name: anthraxpurple
+	SubterraneanActorLayer:
+	JumpjetActorLayer:
+		HeightOffset: 1c256
+	WarheadDebugOverlay:
+	CustomTerrainDebugOverlay:
+	SpawnMapActors:
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxDisplayOrder: 4
+		BuildRadiusCheckboxDisplayOrder: 5
+	MapOptions:
+		ShortGameCheckboxDisplayOrder: 2
+		TechLevelDropdownDisplayOrder: 2
+		GameSpeedDropdownDisplayOrder: 3
+	MPStartLocations:
+		SeparateTeamSpawnsCheckboxDisplayOrder: 6
+	CreateMPPlayers:
+	LuaScript:
+		Scripts: main.lua, citycash.lua, scavengercash.lua, promotions.lua
+
+	####################################################################################################
+	#		CUSTOM
+	####################################################################################################
+
+	MPStartUnits@mcvonlycustom:
+		Class: none
+		ClassName: MCV Only
+		Factions: custom
+		BaseActor: c1mcv
+
+	MPStartUnits@defaultcustom:
+		Class: light
+		ClassName: Light Support
+		Factions: custom
+		BaseActor: c1mcv
+		SupportActors: truck,truck
+
+	MPStartUnits@heavycustom:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: custom
+		BaseActor: c1mcv
+		SupportActors: truck,truck,truck,truck
+        
+	####################################################################################################
+	#		ALL
+	####################################################################################################
+
+	MPStartUnits@mcvonlyall:
+		Class: none
+		ClassName: MCV Only
+		Factions: all
+		BaseActor: mm1mcv
+		SupportActors: mm2mcv,mm1ramcv,mm2ramcv,mmra2amcv,mmra2smcv,mmyrpcv,mm12100mcv,mm22100mcv,mmsctmcv,mmscpmcv,mmsczmcv,mmcitymcv,tsmcvgdi,tsmcvcabal,tsmcvmutant,tsmcvnod,glamcv,chnmcv,usamcv,leangmcv,mcv.imperium,d2k_mcv,sow_mcv,wc_h_mcv,wc_o_mcv,mcv.freedomguard,mcv.shadowhand,mcv.xenite,mcv.togran
+
+	MPStartUnits@defaultall:
+		Class: light
+		ClassName: Light Support
+		Factions: all
+		BaseActor: mm1mcv
+		SupportActors: mm2mcv,mm1ramcv,mm2ramcv,mmra2amcv,mmra2smcv,mmyrpcv,mm12100mcv,mm22100mcv,mmsctmcv,mmscpmcv,mmsczmcv,mmcitymcv,tsmcvgdi,tsmcvcabal,tsmcvmutant,tsmcvnod,glamcv,chnmcv,usamcv,leangmcv,mcv.imperium,d2k_mcv,sow_mcv,wc_h_mcv,wc_o_mcv,mcv.freedomguard,mcv.shadowhand,mcv.xenite,mcv.togran,truck,truck
+
+	MPStartUnits@heavyall:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: all
+		BaseActor: mm1mcv
+		SupportActors: mm2mcv,mm1ramcv,mm2ramcv,mmra2amcv,mmra2smcv,mmyrpcv,mm12100mcv,mm22100mcv,mmsctmcv,mmscpmcv,mmsczmcv,mmcitymcv,tsmcvgdi,tsmcvcabal,tsmcvmutant,tsmcvnod,glamcv,chnmcv,usamcv,leangmcv,mcv.imperium,d2k_mcv,sow_mcv,wc_h_mcv,wc_o_mcv,mcv.freedomguard,mcv.shadowhand,mcv.xenite,mcv.togran,truck,truck,truck,truck
+
+	MPStartUnits@mcvonlygdiall:
+		Class: none
+		ClassName: MCV Only
+		Factions: allgdi
+		BaseActor: mcv.gdi
+		SupportActors: tsmcvgdi
+	MPStartUnits@mcvonlynodall:
+		Class: none
+		ClassName: MCV Only
+		Factions: allnod
+		BaseActor: mcv.nod
+		SupportActors: tsmcvnod, tsmcvcabal
+	MPStartUnits@mcvonlyalliesall:
+		Class: none
+		ClassName: MCV Only
+		Factions: allallies
+		BaseActor: ramcv.allies
+		SupportActors: ra2amcv
+	MPStartUnits@mcvonlysovietall:
+		Class: none
+		ClassName: MCV Only
+		Factions: allsoviet
+		BaseActor: ramcv.soviet
+		SupportActors: ra2smcv, yrpcv
+
+	MPStartUnits@defaultgdiall:
+		Class: light
+		ClassName: Light Support
+		Factions: allgdi
+		BaseActor: mcv.gdi
+		SupportActors: tsmcvgdi
+	MPStartUnits@defaultnodall:
+		Class: light
+		ClassName: Light Support
+		Factions: allnod
+		BaseActor: mcv.nod
+		SupportActors: tsmcvnod, tsmcvcabal
+	MPStartUnits@defaultalliesall:
+		Class: light
+		ClassName: Light Support
+		Factions: allallies
+		BaseActor: ramcv.allies
+		SupportActors: ra2amcv
+	MPStartUnits@defaultsovietall:
+		Class: light
+		ClassName: Light Support
+		Factions: allsoviet
+		BaseActor: ramcv.soviet
+		SupportActors: ra2smcv, yrpcv
+
+	MPStartUnits@heavygdiall:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: allgdi
+		BaseActor: mcv.gdi
+		SupportActors: tsmcvgdi
+	MPStartUnits@heavynodall:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: allnod
+		BaseActor: mcv.nod
+		SupportActors: tsmcvnod, tsmcvcabal
+	MPStartUnits@heavyalliesall:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: allallies
+		BaseActor: ramcv.allies
+		SupportActors: ra2amcv
+	MPStartUnits@heavysovietall:
+		Class: heavy
+		ClassName: Heavy Support
+		Factions: allsoviet
+		BaseActor: ramcv.soviet
+		SupportActors: ra2smcv, yrpcv
+        
+	####################################################################################################
+
+	SpawnMPUnits:
+		StartingUnitsClass: none
+		DropdownDisplayOrder: 0
+	CrateSpawner:
+		Minimum: 1
+		Maximum: 10
+		SpawnInterval: 3000
+		WaterChance: 0
+		InitialSpawnDelay: 1500
+		CheckboxDisplayOrder: 1
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	ObjectivesPanel:
+		PanelName: SKIRMISH_STATS
+	RadarPings:
+	LoadWidgetAtGameStart:
+	ScriptTriggers:
+	TimeLimitManager:
+
+EditorWorld:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	EditorCursorLayer:
+	EditorResourceLayer:
+	EditorSelectionLayer:
+	LoadWidgetAtGameStart:
+	EditorActionManager:
