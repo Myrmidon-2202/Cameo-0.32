@@ -2455,7 +2455,6 @@
 
 ^Defense:
 	Inherits: ^BaseBuilding
-	Inherits@EXPERIENCE: ^GainsExperienceBuildings
 	Inherits@selection: ^SelectableCombatBuilding
 	RenderRangeCircle:
 	RenderDetectionCircle:

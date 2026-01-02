@@ -136,6 +136,20 @@ policevoice:
 		Zapped: blank
 		Poisoned: blank
 
+biffvoice:
+	VolumeModifier: 1.7
+	DefaultVariant: .wav
+	Voices:
+		Select: biff_select
+		Move: lego_move
+		Attack: lego_move
+		Action: lego_move
+		Die: lego_unit_death
+		Build: biff_select
+		Burned: blank
+		Zapped: blank
+		Poisoned: blank
+
 captainvoice:
 	VolumeModifier: 1.7
 	DefaultVariant: .wav

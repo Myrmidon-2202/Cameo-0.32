@@ -54,13 +54,12 @@ builderrepair:
 
 legorangedAA:
 	ReloadDelay: 40
-	Range:8c512
+	Range: 8c512
 	Report: commando_attack.wav
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 0c850
 		Image: astro_laser
-		RangeLimit: 15c0
 		Palette: player
 		IsPlayerPalette: true
 	Warhead@1Dam: TargetDamage
@@ -112,11 +111,10 @@ specialrangedAA:
 	Projectile: Bullet
 		Speed: 0c650
 		Image: astro_lolipop
-		RangeLimit: 15c0
 	Warhead@1Dam: TargetDamage
 		Spread: 150
 		Damage: 6000
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		Versus:
 			None: 150
 			Wood: 60
@@ -144,7 +142,7 @@ specialrangedAA2:
 	ReloadDelay: 60
 	Range: 9c512
 	Report: earth_ship_attack.wav
-	ValidTargets: Ground, Air
+	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 0c650
 		Image: astro_lolipop
@@ -152,7 +150,7 @@ specialrangedAA2:
 	Warhead@1Dam: TargetDamage
 		Spread: 300
 		Damage: 10000
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		Versus:
 			None: 150
 			Wood: 60
@@ -167,7 +165,7 @@ specialrangedAA2:
 		Spread: 550
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		Versus:
 			None: 150
 			Wood: 60
@@ -185,7 +183,7 @@ cavalrymelee:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 8025
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		Versus:
 			None: 150
 			Wood: 50
@@ -199,7 +197,7 @@ cavalrymelee:
 		Spread: 128
 		Delay: 5
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		Versus:
 			None: 150
 			Wood: 50
@@ -227,7 +225,7 @@ heromelee:
 	ReloadDelay: 40
 	Range: 1c512
 	Projectile: InstantHit
-	Report: gemma_attack.wav
+	Report: biff_attack.wav
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 7025

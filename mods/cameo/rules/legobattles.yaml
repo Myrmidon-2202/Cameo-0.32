@@ -1081,7 +1081,7 @@ ASTRO_TROOPER:
 	RenderSprites:
 		Scale: 0.8
 	Health:
-		HP: 95000
+		HP: 20000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Voiced:
@@ -1113,7 +1113,7 @@ ASTRO_GRIPLEY:
 	RenderSprites:
 		Scale: 0.8
 	Health:
-		HP: 95000             
+		HP: 30000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Power:
@@ -1147,7 +1147,7 @@ ASTRO_COMMANDO:
 	RenderSprites:
 		Scale: 0.8
 	Health:
-		HP: 95000             
+		HP: 18000             
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Power:
@@ -1416,6 +1416,48 @@ ASTRO_SPACE_POLICE_CAPTAIN:
 		-IdleSequences: idle1,idle2,idle3,idle4
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
+
+ASTRO_BIFF:
+	Inherits@Soldier: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Tooltip:
+		Name: Biff
+	Buildable:
+		Queue: Defence.astro, RADefence.astro, Infantry.X_Infantry
+		BuildPaletteOrder: 60
+		BuildDuration: 250
+		Prerequisites: 
+		Description: Stalwart Melee Hero.
+		BuildLimit: 1    
+	Armament:
+		Weapon: heromelee
+	Valued:
+		Cost: 500   
+	Mobile:
+		Speed: 60  
+	RenderSprites:
+		Scale: 0.8
+	Health:
+		HP: 95000             
+	ReloadDelayMultiplier@cow:
+		Modifier: 60
+	Power:
+		Amount: -10
+	Voiced:
+		VoiceSet: biffvoice
+	ProximityExternalCondition@PROPAGANDA:
+		Range: 6c0
+		Condition: propaganda
+		RequiresCondition: !disabled
+	WithRangeCircle:
+		Range: 6c0
+		Type: propaganda
+		RequiresCondition: !disabled
+	WithInfantryBody:
+		-IdleSequences: idle1,idle2,idle3,idle4
+	WithDeathAnimation:
+		UseDeathTypeSuffix: false
+
 
 LEGOBATTLES_GHOST:
 	Inherits@Soldier: ^Soldier
