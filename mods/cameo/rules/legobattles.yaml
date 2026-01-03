@@ -1,12 +1,18 @@
 World:
-    FactionCA@legobattlesastro:
+	FactionCA@legobattlesastro:
 		Name: Earth
 		InternalName: legobattlesastro
-        Game: Lego Battles
+		Game: Lego Battles
 		Side: Factions
 		Description: Earth faction from Lego Battles
-		
-    ####################################################################################################
+	# FactionCA@legobattlesalien:
+	# 	Name: Alien
+	# 	InternalName: legobattlesalien
+	# 	Game: Lego Battles
+	# 	Side: Factions
+	# 	Description: Alien faction from Lego Battles
+
+	####################################################################################################
 	#		Astro
 	####################################################################################################
 	
@@ -30,16 +36,33 @@ World:
 		BaseActor: lego_astro_mcv
 		SupportActors: legobattles_ghost,legobattles_ghost
 
+	# MPStartUnits@mcvonlyalien:
+	# 	Class: none
+	# 	ClassName: MCV Only
+	# 	Factions: legobattlesastro
+	# 	BaseActor: lego_astro_mcv
+	
+	# MPStartUnits@defaultalien:
+	# 	Class: light
+	# 	ClassName: Light Support
+	# 	Factions: legobattlesastro
+	# 	BaseActor: lego_astro_mcv
+	# 	SupportActors: legobattles_ghost
+	
+	# MPStartUnits@heavyalien:
+	# 	Class: heavy
+	# 	ClassName: Heavy Support
+	# 	Factions: legobattlesastro
+	# 	BaseActor: lego_astro_mcv
+	# 	SupportActors: legobattles_ghost,legobattles_ghost
+
 Player:
-    ExternalCondition@BuildingsOwned:
-        Condition: BuildingsOwned
-    ProvidesPrerequisite@BuildingsOwned:
-        Prerequisite: allowsMCV
-        RequiresCondition: BuildingsOwned < 5
-    ProvidesPrerequisite@faction_astro:
-        Prerequisite: faction_astro
-        Factions: Astro
-    ClassicProductionQueue@RABUILDINGASTRO:
+	ExternalCondition@BuildingsOwned:
+		Condition: BuildingsOwned
+	ProvidesPrerequisite@BuildingsOwned:
+		Prerequisite: allowsMCV
+		RequiresCondition: BuildingsOwned < 5
+	ClassicProductionQueue@RABUILDINGASTRO:
 		Type: RABuilding.Astro
 		DisplayOrder: 0
 		Group: Building
@@ -117,6 +140,90 @@ Player:
 		CancelledAudio: Cancelled
 		SpeedUp: True
 		BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+
+
+
+	# ProvidesPrerequisite@faction_alien:
+	# 	Prerequisite: faction_alien
+	# 	Factions: Alien
+	# ClassicProductionQueue@RABUILDINGALIEN:
+	# 	Type: RABuilding.alien
+	# 	DisplayOrder: 0
+	# 	Group: Building
+	# 	LowPowerModifier: 200
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RADEFENCEALIEN:
+	# 	Type: RADefence.alien
+	# 	DisplayOrder: 1
+	# 	Group: Defence
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: ConstructionComplete
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RAINFANTRYTALIEN:
+	# 	Type: RAInfantry.astro
+	# 	DisplayOrder: 2
+	# 	Group: Infantry
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RAVEHICLEALIEN:
+	# 	Type: RAVehicle.alien
+	# 	DisplayOrder: 2
+	# 	Group: Vehicle
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RAAIRCRAFTALIEN:
+	# 	Type: RAAircraft.alien
+	# 	DisplayOrder: 2
+	# 	Group: Aircraft
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
+	# ClassicProductionQueue@RANAVALALIEN:
+	# 	Type: RANAVAL.alien
+	# 	DisplayOrder: 2
+	# 	Group: Naval
+	# 	LowPowerModifier: 300
+	# 	ReadyAudio: UnitReady
+	# 	BlockedAudio: NoBuild
+	# 	LimitedAudio: BuildingInProgress
+	# 	QueuedAudio: Training
+	# 	OnHoldAudio: OnHold
+	# 	CancelledAudio: Cancelled
+	# 	SpeedUp: True
+	# 	BuildTimeSpeedReduction: 100, 50, 33, 25, 20, 17, 14, 12, 11, 10
 
     ####################################################################################################
 	#		LEGO
@@ -547,14 +654,14 @@ Player:
 	####################################################################################################
 
 
-ASTRO_CONYARD:   
+ASTRO_CONYARD:
 	GrantExternalConditionToOwner@BuildingsOwned:
 		Condition: BuildingsOwned
 	Inherits: ^BaseBuilding
 	Inherits@shape: ^2x2Shape
-    Inherits@CPQWP: ^CPQCondition
-    Inherits@ai: ^AIConyardCash
-    Inherits@conyard: ^Conyard
+	Inherits@CPQWP: ^CPQCondition
+	Inherits@ai: ^AIConyardCash
+	Inherits@conyard: ^Conyard
 	Selectable:
 		Bounds: 64,64
 	HitShape:
@@ -634,9 +741,19 @@ ASTRO_CONYARD:
 	BaseProvider:
 		Cooldown: 75
 		Range: 14c0
-  	BaseBuilding:
+	AutoTarget:
+		ScanRadius: 5
+		InitialStance: AttackAnything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: LHEROtarget
+	AttackOmni:
+		PauseOnCondition: disabled
+	Armament: 
+		Weapon: HQHEROHEAL
+		TargetStances: Ally
+	BaseBuilding:
 	Voiced:
-		VoiceSet: astroconyardvoice    
+		VoiceSet: astroconyardvoice
 	Refinery:
 		DockAngle: 112
 		DockOffset: 1,2
@@ -738,7 +855,7 @@ ASTRO_WELLCAP:
 	CashTrickler:
 		Amount: 300
 		DisplayDuration: 30
-		Interval: 70
+		Interval: 200
 	Voiced:
 		VoiceSet: ewellcapvoice
 
@@ -970,6 +1087,15 @@ astro_tower3:
 	RenderSprites:
 		Scale: 0.8
 	ProvidesPrerequisite@buildingname:
+
+####################################################################################################
+#		Alien - BUILDINGS
+####################################################################################################
+
+# ALIEN_BASE:
+# 	Inherits: ^ASTRO_CONYARD
+# 	Tooltip:
+# 		Name: Crater Base
 
 ####################################################################################################
 #		ASTRO - INFANTRY
@@ -1209,8 +1335,8 @@ ASTRO_GEMMA:
 		Prerequisites: 
 		Description: Astro Girlboss Hero
 		BuildLimit: 1
-	# Armament:
-	# 	Weapon: legoheroranged
+	Armament:
+	 	Weapon: legoheroranged
 	Valued:
 		Cost: 500   
 	Mobile:
@@ -1233,6 +1359,8 @@ ASTRO_GEMMA:
 		Amount: -10
 	Voiced:
 		VoiceSet: gemmavoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
 	WithInfantryBody:
 		-IdleSequences: idle1,idle2,idle3,idle4
 	WithDeathAnimation:
@@ -1404,6 +1532,8 @@ ASTRO_SPACE_POLICE_CAPTAIN:
 		Amount: -10
 	Voiced:
 		VoiceSet: captainvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
 	ProximityExternalCondition@PROPAGANDA:
 		Range: 6c0
 		Condition: propaganda
@@ -1445,6 +1575,8 @@ ASTRO_BIFF:
 		Amount: -10
 	Voiced:
 		VoiceSet: biffvoice
+	Targetable@LEGOHERO:
+		TargetTypes: LHEROtarget
 	ProximityExternalCondition@PROPAGANDA:
 		Range: 6c0
 		Condition: propaganda

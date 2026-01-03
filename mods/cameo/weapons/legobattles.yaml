@@ -36,6 +36,19 @@ troopermelee:
 			Heavy: 60
 			Concrete: 40
 
+HQHEROHEAL:
+	ReloadDelay: 15
+	Range: 5c512
+	ValidTargets: LHEROtarget
+	Report: castle_healing.wav
+	Projectile: LaserZap
+		Color: FFDF00
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -8000
+		ValidStances: Ally
+		ValidTargets: LHEROtarget
+
 builderrepair:
 	ReloadDelay: 5
 	Range: 1c512

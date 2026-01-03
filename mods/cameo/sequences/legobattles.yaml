@@ -211,6 +211,24 @@ astro_tower3:
 		AddExtension: False
 
 ####################################################################################################
+#		Alien - BUILDINGS
+####################################################################################################
+# alien_base:
+# 	idle: legobattles_astro_buildings
+# 		Start: 0
+# 	damaged-idle: legobattles_astro_buildings
+# 		Start: 0
+# 	make: legobattles_astro_buildings
+# 		Start: 0
+# 	dead: legobattles_astro_buildings
+# 		Start: 0
+# 	lego_production_overlay_human: lego_production_overlay_human
+# 		Length: 10
+# 		Offset: 14,12,0
+# 	icon: astro_cameos.png
+# 		Start: 0
+# 		AddExtension: False
+####################################################################################################
 #		ASTRO - INFANTRY
 ####################################################################################################
 
