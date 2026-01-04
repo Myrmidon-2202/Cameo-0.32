@@ -675,7 +675,7 @@ ASTRO_CONYARD:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-        -BuildSounds
+		Description: Earth HQ unit./n Constructs buildings./n Hero units are healed by it.
 	DamageMultiplier@DamageReduction:
 		Modifier: 88
 	Health:
@@ -924,6 +924,7 @@ ASTRO_VEHICLEFACTORY:
 		RequiresCondition: !build-incomplete
 		Queues: Vehicle.astro
 		Sequence: lego_production_overlay_brick
+		Palette: player
 	SpawnActorsOnSell:
 		ActorTypes: astro_trooper
 	Health:
@@ -974,10 +975,10 @@ astro_tower:
 		Weapon: legorangedaa
 		RequiresCondition: !astrotower2upg && !astrotower3upg
 	Armament@guardtower:
-		Weapon: legoranged
+		Weapon: specialrangedstar
 		RequiresCondition: astrotower2upg && !astrotower3upg
 	Armament@guardtoweraa:
-		Weapon: legorangedaa
+		Weapon: specialrangedstar
 		RequiresCondition: astrotower2upg && !astrotower3upg
 	Armament@g3tower:
 		Weapon: specialrangedAA
@@ -1344,7 +1345,7 @@ ASTRO_GEMMA:
 	RenderSprites:
 		Scale: 0.8
 	Health:
-		HP: 95000             
+		HP: 100000
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	ProximityExternalCondition@PROPAGANDA:
@@ -1525,7 +1526,7 @@ ASTRO_SPACE_POLICE_CAPTAIN:
 	RenderSprites:
 		Scale: 0.8
 	Health:
-		HP: 95000             
+		HP: 100000             
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Power:
@@ -1568,7 +1569,7 @@ ASTRO_BIFF:
 	RenderSprites:
 		Scale: 0.8
 	Health:
-		HP: 95000             
+		HP: 100000             
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	Power:
@@ -1762,7 +1763,7 @@ astro_space_police_cruiser:
 	Health:
 		HP: 97000   
 	Armament:
-		Weapon: specialrangedAA
+		Weapon: specialrangedstar
 	Armor:
 		Type: Medium
 	AttackFrontal:

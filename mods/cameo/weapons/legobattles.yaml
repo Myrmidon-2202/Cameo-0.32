@@ -187,6 +187,40 @@ specialrangedAA2:
 			Heavy: 60
 			Concrete: 60
 
+specialrangedstar:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: earth_ship_attack.wav
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 0c650
+		Image: lego_flaming_star
+		RangeLimit: 15c0
+	Warhead@1Dam: TargetDamage
+		Spread: 300
+		Damage: 10000
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 10
+		Spread: 550
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 60
+
 cavalrymelee:
 	Inherits: ^legomelee
 	ReloadDelay: 50
