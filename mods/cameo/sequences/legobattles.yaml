@@ -632,9 +632,25 @@ astro_space_police_captain:
 	icon: astro_cameos.png
 		Start: 22
 		AddExtension: False
+	haste_status_icon: wc2_icons_statuses.png
+		Start: 1
+		AddExtension: False
+	deathcoil_status_icon: wc2_icons_statuses.png
+		Offset: 16,16
+		Start: 8
+		AddExtension: False
+	deathanddecay_status_icon: wc2_icons_statuses.png
+		Start: 9
+		AddExtension: False
+	raisedead_status_icon: wc2_icons_statuses.png
+		Start: 10
+		AddExtension: False
+	locked_status_icon: wc2_icons_statuses.png
+		Start: 14
+		AddExtension: False
 
 astro_biff:
-	Inherits: ^legoinfantry	
+	Inherits: ^legoinfantry
 	stand:
 		Facings: -8
 		Combine:
@@ -677,6 +693,22 @@ astro_biff:
 		Length: 7
 	icon: astro_cameos.png
 		Start: 23
+		AddExtension: False
+	haste_status_icon: wc2_icons_statuses.png
+		Start: 1
+		AddExtension: False
+	deathcoil_status_icon: wc2_icons_statuses.png
+		Offset: 16,16
+		Start: 8
+		AddExtension: False
+	deathanddecay_status_icon: wc2_icons_statuses.png
+		Start: 9
+		AddExtension: False
+	raisedead_status_icon: wc2_icons_statuses.png
+		Start: 10
+		AddExtension: False
+	locked_status_icon: wc2_icons_statuses.png
+		Start: 14
 		AddExtension: False
 
 
@@ -818,7 +850,14 @@ lego_flaming_star:
 #		ASTRO - Misc
 ####################################################################################################
 
-
+explosion:
+	Defaults:
+		Length: *
+		ZOffset: 2047
+	earthspacelaser: earthspacelaser
+		Length: *
+		Offset: 0, -78
+		ZOffset: 1023
 
 
 

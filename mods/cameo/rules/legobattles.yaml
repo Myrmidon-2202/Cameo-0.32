@@ -289,6 +289,7 @@ Player:
 	Inherits: ^Helicopter
 	Inherits@ANNOUNCE: ^AnnounceOnBuild
 	Inherits@EXT: ^ExternalConditions
+	Inherits@PROPAGANDA: ^PropagandaSelfHeal
 	-SpawnActorOnDeath:
 	-Explodes:
 	RevealsShroud:
@@ -751,6 +752,8 @@ ASTRO_CONYARD:
 	Armament: 
 		Weapon: HQHEROHEAL
 		TargetStances: Ally
+		ForceTargetStances: None
+		PauseOnCondition: healed && !injured
 	BaseBuilding:
 	Voiced:
 		VoiceSet: astroconyardvoice
@@ -925,6 +928,7 @@ ASTRO_VEHICLEFACTORY:
 		Queues: Vehicle.astro
 		Sequence: lego_production_overlay_brick
 		Palette: player
+		IsPlayerPalette: True
 	SpawnActorsOnSell:
 		ActorTypes: astro_trooper
 	Health:
@@ -1337,7 +1341,7 @@ ASTRO_GEMMA:
 		Description: Astro Girlboss Hero
 		BuildLimit: 1
 	Armament:
-	 	Weapon: legoheroranged
+		Weapon: legoheroranged
 	Valued:
 		Cost: 500   
 	Mobile:
@@ -1346,6 +1350,12 @@ ASTRO_GEMMA:
 		Scale: 0.8
 	Health:
 		HP: 100000
+	GrantConditionOnDamageState@INJURED:
+		ValidDamageStates: Heavy, Critical, Medium, Light
+		Condition: injured
+	GrantConditionOnDamageState@HEALED:
+		ValidDamageStates: Undamaged
+		Condition: healed
 	ReloadDelayMultiplier@cow:
 		Modifier: 60
 	ProximityExternalCondition@PROPAGANDA:
@@ -1366,9 +1376,9 @@ ASTRO_GEMMA:
 		-IdleSequences: idle1,idle2,idle3,idle4
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
-	#Weapons
+	#Spells
 	AttackFrontal:
-		Armaments: primary, deathcoil, haste, deathanddecay, raisedead
+		Armaments: primary, defense, speed, legoemp, spacelaser
 	AutoTargetPriority@DEFAULT:
 		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
 	AutoTargetPriority@ATTACKANYTHING:
@@ -1377,69 +1387,69 @@ ASTRO_GEMMA:
 		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
 		ValidTargets: haste_target
 		InvalidTargets: NoAutoTarget
-	ChangesHealth@DEATHCOILHEAL:
-		PercentageStep: 83
-		Delay: 0
-		StartIfBelow: 110
-		RequiresCondition: cond_deathcoil_drain
 	Armament:
-		Weapon: wc2deathknightFire
+		Weapon: legoheroranged
 		FireDelay: 7
 		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) || (FSD_cond_3) || (FSD_cond_4)
-	Armament@DEATHCOIL:
-		Name: deathcoil
-		Weapon: wc2deathknightDeathCoil
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: legoheroranged
 		FireDelay: 7
-		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
-		PauseOnCondition: mana < 100
-	Armament@DEATHCOILSCATTER1:
-		Weapon: wc2deathknightDeathCoilScatter_Left
-		FireDelay: 7
-		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
-		PauseOnCondition: mana < 100
-	Armament@DEATHCOILSCATTER2:
-		Weapon: wc2deathknightDeathCoilScatter_Right
-		FireDelay: 7
-		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
-		PauseOnCondition: mana < 100
-	Armament@HASTE:
-		Name: haste
-		Weapon: wc2deathknightHaste
-		FireDelay: 7
-		TargetStances: Ally
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
 		RequiresCondition: FSD_cond_2
-		PauseOnCondition: mana < 50
-	Armament@DEATHANDDECAY:
-		Name: deathanddecay
-		Weapon: wc2deathknightDeathAndDecay
+		PauseOnCondition: mana < 10
+	# Armament@DEATHCOILSCATTER1:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Left
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	# Armament@DEATHCOILSCATTER2:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Right
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	Armament@SPEED:
+		Name: speed
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@LEGOEMP:
+		Name: legoemp
+		Weapon: legoemp
 		FireDelay: 7
 		RequiresCondition: FSD_cond_3
 		PauseOnCondition: mana < 25
-	Armament@RAISEDEAD:
-		Name: raisedead
-		Weapon: wc2deathknightRaiseDead
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
 		FireDelay: 7
 		RequiresCondition: FSD_cond_4
 		PauseOnCondition: mana < 50
 	# "Mana" (ammopool)
-	GrantConditionOnAttack@DEATHCOIL:
-		Condition: cond_deathcoil_drain
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
 		ArmamentNames: deathcoil
 		MaximumInstances: 1
 		RevokeDelay: 2
-	GrantConditionOnAttack@HASTE:
-		Condition: cond_haste_drain
-		ArmamentNames: haste
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
 		MaximumInstances: 1
 		RevokeDelay: 2
-	GrantConditionOnAttack@DEATHANDDECAY:
-		Condition: cond_deathanddecay_drain
-		ArmamentNames: deathanddecay
+	GrantConditionOnAttack@LEGOEMP:
+		Condition: cond_legoemp_drain
+		ArmamentNames: legoemp
 		MaximumInstances: 1
 		RevokeDelay: 2
-	GrantConditionOnAttack@RAISEDEAD:
-		Condition: cond_raisedead_drain
-		ArmamentNames: raisedead
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
 		MaximumInstances: 1
 		RevokeDelay: 2
 	AmmoPoolCA:
@@ -1451,22 +1461,22 @@ ASTRO_GEMMA:
 		Delay: 10
 		Count: 1
 		ShowSelectionBar: false
-	ReloadAmmoPoolCA@DEATHCOIL:
+	ReloadAmmoPoolCA@DEFENSE:
 		Delay: 1
 		Count: -100
-		RequiresCondition: cond_deathcoil_drain
+		RequiresCondition: cond_defense_drain
 	ReloadAmmoPoolCA@HASTE:
 		Delay: 1
 		Count: -50
-		RequiresCondition: cond_haste_drain
-	ReloadAmmoPoolCA@DEATHANDDECAY:
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPoolCA@LEGOEMP:
 		Delay: 1
 		Count: -25
-		RequiresCondition: cond_deathanddecay_drain
-	ReloadAmmoPoolCA@RAISEDEAD:
+		RequiresCondition: cond_legoemp_drain
+	ReloadAmmoPoolCA@SPACELASER:
 		Delay: 1
 		Count: -50
-		RequiresCondition: cond_raisedead_drain
+		RequiresCondition: cond_spacelaser_drain
 	
 	### Visual indicator of mode ###
 	WithDecoration@Mode_Deathcoil:
@@ -1481,7 +1491,7 @@ ASTRO_GEMMA:
 		Sequence: deathanddecay_status_icon
 		ReferencePoint: Bottom, Right
 		RequiresCondition: FSD_cond_3
-	WithDecoration@Mode_RaiseDead:
+	WithDecoration@Mode_Spacelaser:
 		Sequence: raisedead_status_icon
 		ReferencePoint: Bottom, Right
 		RequiresCondition: FSD_cond_4
@@ -1508,6 +1518,9 @@ ASTRO_GEMMA:
 ASTRO_SPACE_POLICE_CAPTAIN:
 	Inherits@Soldier: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@wc2_o_deathknight_haste: ^wc2_o_deathknight_haste
+	Inherits@wc2_o_deathknight_deathanddecay: ^wc2_o_deathknight_deathanddecay
+	Inherits@wc2_o_deathknight_raisedead: ^wc2_o_deathknight_raisedead
 	Tooltip:
 		Name: Space Police Captain
 	Buildable:
@@ -1548,9 +1561,149 @@ ASTRO_SPACE_POLICE_CAPTAIN:
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, damage, legoemp, spacelaser
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Weapon: legoheroranged
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) || (FSD_cond_3) || (FSD_cond_4)
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	# Armament@DEATHCOILSCATTER1:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Left
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	# Armament@DEATHCOILSCATTER2:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Right
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	Armament@DAMAGE:
+		Name: damage
+		Weapon: legoheroranged
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: damagebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@LEGOEMP:
+		Name: legoemp
+		Weapon: legoemp
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (ammopool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@DAMAGE:
+		Condition: cond_damage_drain
+		ArmamentNames: damage
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LEGOEMP:
+		Condition: cond_legoemp_drain
+		ArmamentNames: legoemp
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPoolCA:
+		Armaments:
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPoolCA@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPoolCA@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPoolCA@DAMAGE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_damage_drain
+	ReloadAmmoPoolCA@LEGOEMP:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_legoemp_drain
+	ReloadAmmoPoolCA@SPACELASER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_spacelaser_drain
+	
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Deathcoil:
+		Sequence: deathcoil_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Haste:
+		Sequence: haste_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_DeathAndDecay:
+		Sequence: deathanddecay_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Spacelaser:
+		Sequence: raisedead_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
+
 ASTRO_BIFF:
 	Inherits@Soldier: ^Soldier
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@wc2_o_deathknight_haste: ^wc2_o_deathknight_haste
+	Inherits@wc2_o_deathknight_deathanddecay: ^wc2_o_deathknight_deathanddecay
+	Inherits@wc2_o_deathknight_raisedead: ^wc2_o_deathknight_raisedead
 	Tooltip:
 		Name: Biff
 	Buildable:
@@ -1560,8 +1713,6 @@ ASTRO_BIFF:
 		Prerequisites: 
 		Description: Stalwart Melee Hero.
 		BuildLimit: 1    
-	Armament:
-		Weapon: heromelee
 	Valued:
 		Cost: 500   
 	Mobile:
@@ -1590,6 +1741,142 @@ ASTRO_BIFF:
 		-IdleSequences: idle1,idle2,idle3,idle4
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
+	#Spells
+	AttackFrontal:
+		Armaments: primary, defense, speed, legoemp, spacelaser
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: (stance-attackanything || assault-move) && !FSD_cond_2
+	AutoTargetPriority@ATTACKANYTHING_HASTE:
+		RequiresCondition: (stance-attackanything || assault-move) && FSD_cond_2
+		ValidTargets: haste_target
+		InvalidTargets: NoAutoTarget
+	Armament:
+		Weapon: heromelee
+		FireDelay: 7
+		RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner) || (FSD_cond_2) || (FSD_cond_3) || (FSD_cond_4)
+	Armament@DEFENSE:
+		Name: defense
+		Weapon: heromelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: defensebuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	# Armament@DEATHCOILSCATTER1:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Left
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	# Armament@DEATHCOILSCATTER2:
+	# 	Weapon: wc2deathknightDeathCoilScatter_Right
+	# 	FireDelay: 7
+	# 	RequiresCondition: (FSD_cond_1 && !wc2_cond_bot_owner) || (FSD_cond_1_AI && wc2_cond_bot_owner)
+	# 	PauseOnCondition: mana < 100
+	Armament@SPEED:
+		Name: speed
+		Weapon: heromelee
+		FireDelay: 7
+		TargetStances: Enemy
+		GrantCondition: 
+			Condition: speedbuff
+		RequiresCondition: FSD_cond_2
+		PauseOnCondition: mana < 10
+	Armament@LEGOEMP:
+		Name: legoemp
+		Weapon: legoemp
+		FireDelay: 7
+		RequiresCondition: FSD_cond_3
+		PauseOnCondition: mana < 25
+	Armament@SPACELASER:
+		Name: spacelaser
+		Weapon: spacelaser
+		FireDelay: 7
+		RequiresCondition: FSD_cond_4
+		PauseOnCondition: mana < 50
+	# "Mana" (ammopool)
+	GrantConditionOnAttack@DEFENSE:
+		Condition: cond_defense_drain
+		ArmamentNames: deathcoil
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPEED:
+		Condition: cond_speed_drain
+		ArmamentNames: speed
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@LEGOEMP:
+		Condition: cond_legoemp_drain
+		ArmamentNames: legoemp
+		MaximumInstances: 1
+		RevokeDelay: 2
+	GrantConditionOnAttack@SPACELASER:
+		Condition: cond_spacelaser_drain
+		ArmamentNames: spacelaser
+		MaximumInstances: 1
+		RevokeDelay: 2
+	AmmoPoolCA:
+		Armaments:
+		Ammo: 255
+		PipCount: 10
+		AmmoCondition: mana
+	ReloadAmmoPoolCA@PassiveRegen:
+		Delay: 10
+		Count: 1
+		ShowSelectionBar: false
+	ReloadAmmoPoolCA@DEFENSE:
+		Delay: 1
+		Count: -100
+		RequiresCondition: cond_defense_drain
+	ReloadAmmoPoolCA@HASTE:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_speed_drain
+	ReloadAmmoPoolCA@LEGOEMP:
+		Delay: 1
+		Count: -25
+		RequiresCondition: cond_legoemp_drain
+	ReloadAmmoPoolCA@SPACELASER:
+		Delay: 1
+		Count: -50
+		RequiresCondition: cond_spacelaser_drain
+	
+	### Visual indicator of mode ###
+	WithDecoration@Mode_Deathcoil:
+		Sequence: deathcoil_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_1
+	WithDecoration@Mode_Haste:
+		Sequence: haste_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_2 
+	WithDecoration@Mode_DeathAndDecay:
+		Sequence: deathanddecay_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_3
+	WithDecoration@Mode_Spacelaser:
+		Sequence: raisedead_status_icon
+		ReferencePoint: Bottom, Right
+		RequiresCondition: FSD_cond_4
+	
+	### Starting spell randomizer for AI.
+	GrantConditionOnBotOwner@wc2magebotcontrol:
+		Condition: wc2_cond_bot_owner
+		Bots: easiest, easy, medium, hard, brutal, challenger, unbeatable, cameogod, airforce, defenseai
+	GrantRandomCondition@wc2magebotcontrol:
+		Conditions: FSD_cond_1_AI, FSD_cond_2_AI, FSD_cond_3_AI, FSD_cond_4_AI
+	# FSD_Cond_1 is always granted at start due to the four state deploy.
+	GrantCondition@Cond2AI:
+		Condition: FSD_cond_2
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_2_AI
+	GrantCondition@Cond3AI:
+		Condition: FSD_cond_3
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_3_AI
+	GrantCondition@Cond4AI:
+		Condition: FSD_cond_4
+		RequiresCondition: wc2_cond_bot_owner && FSD_cond_4_AI
 
 
 LEGOBATTLES_GHOST:
@@ -1627,7 +1914,7 @@ LEGOBATTLES_GHOST:
 ####################################################################################################
 
 ASTRO_CLAW_TANK:
-	Inherits@LEGOTankTRACKED: ^Soldier
+	Inherits@LEGOTankTRACKED: ^Walker
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@fix: ^Repairable
 	Inherits@2: ^IronCurtainable
@@ -1645,6 +1932,7 @@ ASTRO_CLAW_TANK:
     Inherits@LeechEggLayable: ^LeechEggLayable
     Inherits@Xmassetting: ^Xmas_setting
     Inherits@casinoupgrade: ^CasinoUpgradeable
+	Inherits@PROPAGANDA: ^PropagandaSelfHeal
 	Crushable:
 		WarnProbability: 0
 		CrushClasses: vehicle
@@ -1667,6 +1955,8 @@ ASTRO_CLAW_TANK:
 		BuildDurationModifier: 50
 		Prerequisites: 
 		Description: Assault vehicle.
+	Power:
+		Amount: -20
 	Health:
 		HP: 90000   
 	Armament:
@@ -1681,6 +1971,9 @@ ASTRO_CLAW_TANK:
 	Mobile:
 		Speed: 30
 		SharesCell: False
+	RevealsShroud:
+		Range: 9c0
+		Type: GroundPosition
 	RenderSprites:
 		Scale: 1
 	Health:
@@ -1690,7 +1983,6 @@ ASTRO_CLAW_TANK:
 	Voiced:
 		VoiceSet: clawtankvoice
 	WithInfantryBody:
-		-IdleSequences: idle1,idle2,idle3,idle4
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 
@@ -1721,6 +2013,8 @@ astro_transport:
 		Prerequisites: 
 		Queue: Vehicle.astro
 		Description: Flying transport unit.\nDetector.
+	Power:
+		Amount: -20
 	Voiced:
 		VoiceSet: astrotransportvoice
 
@@ -1750,6 +2044,8 @@ astro_special_starfighter:
 		Prerequisites: 
 		Queue: Vehicle.astro
 		Description: Medium Flying unit.\nDetector.
+	Power:
+		Amount: -30
 	Voiced:
 		VoiceSet: starfightervoice
 
@@ -1779,12 +2075,16 @@ astro_space_police_cruiser:
 		Prerequisites: 
 		Queue: Vehicle.astro
 		Description: Flying Patrol unit.\nDetector.
+	Power:
+		Amount: -40
 	DetectCloaked:
 		CloakTypes: Cloak, Underwater
 		Range: 9c0
 	RenderDetectionCircle:
 	Voiced:
 		VoiceSet: spacepolicecruiservoice
+	RenderSprites:
+		Scale: 0.7
 
 astro_starship2:
 	Inherits@LEGOAirUnit: ^lego_airunit
@@ -1812,6 +2112,8 @@ astro_starship2:
 		Prerequisites: 
 		Queue: Vehicle.astro
 		Description: Heavy Flying unit.
+	Power:
+		Amount: -50
 	RenderSprites:
 		Image: astro_starship2
 	Voiced:

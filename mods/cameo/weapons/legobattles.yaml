@@ -118,12 +118,13 @@ legoranged:
 
 specialrangedAA:
 	ReloadDelay: 60
-	Range: 9c512
+	Range: 10c512
 	Report: earth_ship_attack.wav
-	ValidTargets: Ground, Air
 	Projectile: Bullet
 		Speed: 0c650
 		Image: astro_lolipop
+		Palette: player
+		IsPlayerPalette: true
 	Warhead@1Dam: TargetDamage
 		Spread: 150
 		Damage: 6000
@@ -155,11 +156,12 @@ specialrangedAA2:
 	ReloadDelay: 60
 	Range: 9c512
 	Report: earth_ship_attack.wav
-	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 0c650
 		Image: astro_lolipop
 		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true
 	Warhead@1Dam: TargetDamage
 		Spread: 300
 		Damage: 10000
@@ -191,13 +193,14 @@ specialrangedstar:
 	ReloadDelay: 60
 	Range: 9c512
 	Report: earth_ship_attack.wav
-	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 0c650
 		Image: lego_flaming_star
 		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true
 	Warhead@1Dam: TargetDamage
-		Spread: 300
+		Spread: 500
 		Damage: 10000
 		Versus:
 			None: 150
@@ -254,13 +257,11 @@ cavalrymelee:
 			Concrete: 40
 
 legoheroranged:
-	Inherits: legorangedAA
+	Inherits: legoranged
 	ReloadDelay: 40
 	Range: 8c512
 	Report: commando_attack.wav
-	ValidTargets: Ground
 	Warhead@1Dam: TargetDamage
-		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
 	Warhead@2Eff: CreateEffect
 	Warhead@Percentage: HealthPercentageDamage
@@ -296,3 +297,73 @@ heromelee:
 			Medium: 90
 			Heavy: 70
 			Concrete: 40
+
+spacelaser:
+	Range: 7c512
+	Report: space_laser.wav
+	Projectile: InstantHit
+	ValidTargets: Ground, Air, Trees
+	Warhead@1Dam_impact: SpreadDamage
+		Range: 0, 1c1, 2c1, 2c512
+		Damage: 10000
+		Falloff: 1000, 1000, 250, 100
+		ValidTargets: Ground, Air, Trees
+		AffectsParent: True
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath, Incendiary
+	Warhead@2Smu_impact: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+	Warhead@3Smu_area: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		Size: 1
+		Delay: 3
+	Warhead@4laserblast: CreateEffect
+		Explosions: earthspacelaser
+	Warhead@5Smu_area2: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+		Size: 2,1
+		Delay: 6
+
+empstar:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: earth_ship_attack.wav
+	Projectile: Bullet
+		Speed: 0c650
+		Image: lego_flaming_star
+		RangeLimit: 15c0
+		Palette: player
+		IsPlayerPalette: true        
+	Warhead@1Con: GrantExternalCondition
+		Condition: empdisable
+		ValidTargets: Vehicle, Cyborg, Structure
+		Duration: 25
+		Range: 1c512
+
+legoemp:
+	ReloadDelay: 60
+	Range: 9c512
+	Report: earth_ship_attack.wav
+	Projectile: InstantHit
+	Warhead@1Dam: TargetDamage
+		Spread: 500
+		Damage: 10000
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@1Con: GrantExternalCondition
+		Condition: empdisable
+		ValidTargets: Vehicle, Cyborg, Structure
+		Duration: 25
+		Range: 1c512
+	Warhead@3cluster: FireCluster
+		Weapon: empstar
+		Dimensions: 10,10
+		Footprint: X_____________X  X_____________X X_____________X X_____________X X_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________XX_____________X X_____________X X_____________X 

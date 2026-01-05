@@ -3756,7 +3756,7 @@ CPQDEBUGDUMMY:
 ^NotDevourable:
 	Targetable@ND:
 		TargetTypes: DevourImmune
-        
+
 ^BombAttachable:
 	DelayedWeaponAttachable@ivan:
 		Type: ivanbomb
@@ -4426,6 +4426,8 @@ CPQDEBUGDUMMY:
 	Targetable@DRIVERKILL:
 		TargetTypes: DriverKillImmune, NeutronImmune
 
+
+
 ^FrenzyPower:
 	WithColoredOverlay@FRENZY:
 		Palette: frenzy
@@ -4514,6 +4516,16 @@ CPQDEBUGDUMMY:
 	RangeMultiplier@usasearchndestroy:
 		Modifier: 120
 		RequiresCondition: usasearchndestroy
+	###LEGO BATTLES BUFFS###
+	SpeedMultiplier@SPEEDBUFF:
+		RequiresCondition: FSD_cond_2 && speedbuff
+		Modifier: 200
+	DamageMultiplier@DEFENSEBUFF:
+		RequiresCondition: FSD_cond_1 && defensebuff
+		Modifier: 50
+	DamageMultiplier@DAMAGEBUFF:
+		RequiresCondition: FSD_cond_2 && damagebuff
+		Modifier: 200
 
 ^ClearableGarrison:
 	Cargo:
