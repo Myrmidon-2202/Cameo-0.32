@@ -196,12 +196,49 @@ specialrangedstar:
 	Projectile: Bullet
 		Speed: 0c650
 		Image: lego_flaming_star
+		Sequences: anim
 		RangeLimit: 15c0
 		Palette: player
 		IsPlayerPalette: true
 	Warhead@1Dam: TargetDamage
 		Spread: 500
 		Damage: 10000
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 70
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath         
+	Warhead@2Eff: CreateEffect
+	Warhead@Percentage: HealthPercentageDamage
+		Damage: 10
+		Spread: 550
+		Delay: 5
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, Incendiary
+		Versus:
+			None: 150
+			Wood: 60
+			Light: 100
+			Medium: 80
+			Heavy: 60
+			Concrete: 60
+
+astroplasmaglob:
+	ReloadDelay: 60
+	Range: 10c512
+	Report: earth_ship_attack.wav
+	Projectile: Bullet
+		Speed: 0c650
+		Image: lego_plasma_ball
+		RangeLimit: 15c0
+		Sequences: anim
+		Palette: player
+		IsPlayerPalette: true
+	Warhead@1Dam: TargetDamage
+		Spread: 700
+		Damage: 15000
 		Versus:
 			None: 150
 			Wood: 60
@@ -329,10 +366,11 @@ spacelaser:
 empstar:
 	ReloadDelay: 60
 	Range: 9c512
-	Report: earth_ship_attack.wav
+	Report: emp.wav
 	Projectile: Bullet
-		Speed: 0c650
-		Image: lego_flaming_star
+		Speed: 0c250
+		Image: lego_emp_star
+		Sequences: anim
 		RangeLimit: 15c0
 		Palette: player
 		IsPlayerPalette: true        

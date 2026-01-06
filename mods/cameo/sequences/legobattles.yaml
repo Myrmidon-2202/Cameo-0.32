@@ -843,6 +843,25 @@ astro_lolipop:
 
 lego_flaming_star:
 	idle:
+	anim: lego_flaming_star
+		start: 0
+		length: 8
+	start: 0
+	length: 8
+
+lego_plasma_ball:
+	idle:
+	anim: lego_plasma_ball
+		start: 0
+		length: 8
+	start: 0
+	length: 8
+
+lego_emp_star:
+	idle:
+	anim: lego_emp_star
+		start: 0
+		length: 8
 	start: 0
 	length: 8
 
