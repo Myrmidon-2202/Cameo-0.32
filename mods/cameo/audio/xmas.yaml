@@ -1,5 +1,0 @@
-voiceSnowman:
-	DefaultVariant: .wav
-	Voices:
-		Select: snowman_select1,snowman_select2,snowman_select3,snowman_select4
-        Action: snowman_select1,snowman_select2,snowman_select3,snowman_select4
