@@ -386,7 +386,7 @@ World:
 		Range: 9c0
 		Type: GroundPosition
 	Selectable:
-		DecorationBounds: 60,48
+		DecorationBounds: 120, 96
 	WithDeathAnimation:
 		UseDeathTypeSuffix: false
 	DeathSounds:
@@ -883,6 +883,7 @@ ASTRO_BIODOME:
 		Name: Biodome
 	Buildable:
 		Queue: Building, RABuilding
+		Prerequisites: ~astro_conyard
 		BuildPaletteOrder: 10
 		BuildDuration: 160
 		BuildDurationModifier: 100
@@ -911,6 +912,7 @@ ASTRO_HARVESTER:
 		Name: Harvester
 	Buildable:
 		Queue: Building, RABuilding
+		Prerequisites: ~astro_conyard
 		BuildPaletteOrder: 30
 		BuildDuration: 160
 		BuildDurationModifier: 100
@@ -953,6 +955,7 @@ ASTRO_WELLCAP:
 		Name: Well Cap
 	Buildable:
 		Queue: Building, RABuilding
+		Prerequisites: ~astro_conyard
 		BuildPaletteOrder: 40
 		BuildDuration: 120
 		BuildDurationModifier: 100
@@ -980,7 +983,7 @@ ASTRO_BARRACKS:
 	Buildable:
 		Queue: Building, RABuilding
 		Description: Trains Astro infantry.
-		Prerequisites: 
+		Prerequisites: ~astro_conyard
 	Production@NORMAL:
 		Produces: Infantry
 	Production@CLASSICPRODUCTIONQUEUES:
@@ -1012,7 +1015,7 @@ ASTRO_VEHICLEFACTORY:
 		Name: Special Factory
 	Buildable:
 		Queue: Building, RABuilding
-		Prerequisites: ASTRO_BIODOME, ASTRO_BARRACKS
+		Prerequisites: ~astro_conyard, ~ASTRO_BIODOME, ~ASTRO_BARRACKS
 		BuildPaletteOrder: 50
 		BuildDuration: 160
 		BuildDurationModifier: 100
@@ -1075,7 +1078,7 @@ astro_tower:
 	Tooltip:
 		Name: Astro Tower
 	Buildable:
-		Prerequisites: 
+		Prerequisites: ~astro_conyard
 		Queue: Defence, RADefence
 		Description: Upgradable defense building\nDetector
 	Voiced:
@@ -1166,7 +1169,7 @@ astro_tower2:
 	Buildable:
 		BuildPaletteOrder: 1
 		RequiresCondition: !astrotower2upg && !astrotower3upg
-		Prerequisites: 
+		Prerequisites: ~astro_conyard
 		Queue: Towerupgrade
 		BuildDuration: 3500
 		BuildDurationModifier: 12
@@ -1186,6 +1189,7 @@ astro_tower3:
 		Name: Astro Tower III
 	Buildable:
 		BuildPaletteOrder: 1
+		Prerequisites: ~astro_conyard
 		RequiresCondition: astrotower2upg && !astrotower3upg
 		Queue: Towerupgrade2
 		BuildDuration: 3500
@@ -1220,6 +1224,7 @@ lego_astro_mcv:
 	Buildable:
 		Queue: Defence, RADefence
 		Description: Transforms into an Eagle Command.
+		Prerequisites ~astro_conyard
 	Tooltip:
 		Name: Mobile Construction Vehicle (Astro)
 	Transforms:
@@ -1239,7 +1244,7 @@ lego_astro_mcv.bot:
 	Buildable:
 		BuildPaletteOrder: 100
 		BuildLimit: 1
-		Prerequisites: ~techlevel.medium, ~botplayer, allowsMCV
+		Prerequisites: ~techlevel.medium, ~botplayer, allowsMCV, ~astro_conyard
 	RenderSprites:
 		Image: lego_astro_mcv
 
@@ -1257,7 +1262,7 @@ ASTRO_BUILDER:
 		Name: Builder
 	Buildable:
 		Queue: Defence, RADefence, Infantry.X_Infantry
-		Prerequisites: astro_conyard
+		Prerequisites: ~astro_conyard
 		BuildPaletteOrder: 5
 		BuildDuration: 250
 		Description: Basic Harvester. Can repair.
@@ -1311,7 +1316,7 @@ ASTRO_TROOPER:
 		Queue: Infantry, RAInfantry, Infantry.X_Infantry
 		BuildPaletteOrder: 1
 		BuildDuration: 100
-		Prerequisites: 
+		Prerequisites: ~astro_barracks
 		Description: Basic Melee Infantry     
 	Armament:
 		Weapon: troopermelee
@@ -1343,7 +1348,7 @@ ASTRO_GRIPLEY:
 		Queue: Infantry, RAInfantry, Infantry.X_Infantry
 		BuildPaletteOrder: 4
 		BuildDuration: 300
-		Prerequisites: 
+		Prerequisites: ~astro_barracks
 		Description: Heavy Melee Infantry    
 	Armament:
 		Weapon: cavalrymelee
@@ -1375,7 +1380,7 @@ ASTRO_COMMANDO:
 		Queue: Infantry, RAInfantry, Infantry.X_Infantry
 		BuildPaletteOrder: 2
 		BuildDuration: 250
-		Prerequisites: 
+		Prerequisites: ~astro_barracks
 		Description: Basic Ranged Infantry    
 	Armament:
 		Weapon: legoranged
@@ -1409,7 +1414,7 @@ ASTRO_SPACE_POLICE:
 		Queue: Infantry, RAInfantry, Infantry.X_Infantry
 		BuildPaletteOrder: 3
 		BuildDuration: 350
-		Prerequisites: 
+		Prerequisites: ~astro_barracks
 		Description: Harrying Ranged Infantry.    
 	Armament:
 		Weapon: legoranged
@@ -1445,7 +1450,7 @@ ASTRO_GEMMA:
 		Queue: Defence, RADefence, Infantry.X_Infantry
 		BuildPaletteOrder: 60
 		BuildDuration: 250
-		Prerequisites: 
+		Prerequisites: ~astro_conyard
 		Description: Astro Girlboss Hero
 		BuildLimit: 1
 	Armament:
@@ -1634,7 +1639,7 @@ ASTRO_SPACE_POLICE_CAPTAIN:
 		Queue: Defence, RADefence, Infantry.X_Infantry
 		BuildPaletteOrder: 60
 		BuildDuration: 250
-		Prerequisites: 
+		Prerequisites: ~astro_conyard 
 		Description: Harrying Ranged Hero.
 		BuildLimit: 1    
 	Armament:
@@ -1818,7 +1823,7 @@ ASTRO_BIFF:
 		Queue: Defence, RADefence, Infantry.X_Infantry
 		BuildPaletteOrder: 60
 		BuildDuration: 250
-		Prerequisites: 
+		Prerequisites: ~astro_conyard
 		Description: Stalwart Melee Hero.
 		BuildLimit: 1    
 	Valued:
@@ -1993,7 +1998,7 @@ LEGOBATTLES_GHOST:
 	Tooltip:
 		Name: Ghost
 	Buildable:
-		Queue: Infantry, RAInfantry, Infantry.X_Infantry
+		Queue: Infantry.X_Infantry
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
 		Prerequisites: 
@@ -2053,15 +2058,15 @@ ASTRO_CLAW_TANK:
 		RequiresCondition: !untargetable
 	-Huntable:
 	Selectable:
-		Bounds: 64,64
-		DecorationBounds: 64,64
+		Bounds: 128,128
+		DecorationBounds: 128,128
 	Tooltip:
 		Name: Claw Tank
 	Buildable:
 		Queue: Vehicle, RAInfantry, Infantry.X_Infantry
 		BuildPaletteOrder: 60
 		BuildDurationModifier: 50
-		Prerequisites: 
+		Prerequisites: ~astro_vehiclefactory
 		Description: Assault vehicle.
 	Power:
 		Amount: -20
@@ -2083,7 +2088,7 @@ ASTRO_CLAW_TANK:
 		Range: 9c0
 		Type: GroundPosition
 	RenderSprites:
-		Scale: 1
+		Scale: 2
 	Health:
 		HP: 95000             
 	ReloadDelayMultiplier@cow:
@@ -2118,7 +2123,7 @@ astro_transport:
 		FacingTolerance: 2
 		PauseOnCondition: disabled
 	Buildable:
-		Prerequisites: 
+		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle
 		Description: Flying transport unit.\nDetector.
 	Power:
@@ -2149,7 +2154,7 @@ astro_special_starfighter:
 		IdealSeparation: 1c0
 		RepulsionSpeed: 10
 	Buildable:
-		Prerequisites: 
+		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle
 		Description: Medium Flying unit.\nDetector.
 	Power:
@@ -2180,7 +2185,7 @@ astro_space_police_cruiser:
 		IdealSeparation: 1c0
 		RepulsionSpeed: 10
 	Buildable:
-		Prerequisites: 
+		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle
 		Description: Flying Patrol unit.\nDetector.
 	Power:
@@ -2217,7 +2222,7 @@ astro_starship2:
 		IdealSeparation: 1c0
 		RepulsionSpeed: 10
 	Buildable:
-		Prerequisites: 
+		Prerequisites: ~astro_vehiclefactory
 		Queue: Vehicle
 		Description: Heavy Flying unit.
 	Power:

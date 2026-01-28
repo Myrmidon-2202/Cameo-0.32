@@ -64,6 +64,7 @@
 astro_conyard:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 	idle: legobattles_astro_buildings
 		Start: 0
 		Length: 1
@@ -88,6 +89,7 @@ astro_conyard:
 astro_biodome:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 	idle: legobattles_astro_buildings
 		Start: 1
 	damaged-idle: legobattles_astro_buildings
@@ -104,6 +106,7 @@ astro_biodome:
 astro_harvester:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 	idle: legobattles_astro_buildings
 		Start: 6
 	damaged-idle: legobattles_astro_buildings
@@ -120,6 +123,7 @@ astro_harvester:
 astro_wellcap:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 	idle: legobattles_astro_buildings
 		Start: 2
 	damaged-idle: legobattles_astro_buildings
@@ -136,6 +140,7 @@ astro_wellcap:
 astro_barracks:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 	idle: legobattles_astro_buildings
 		Start: 3
 	damaged-idle: legobattles_astro_buildings
@@ -156,6 +161,7 @@ astro_barracks:
 astro_vehiclefactory:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 	idle: legobattles_astro_buildings
 		Start: 5
 	damaged-idle: legobattles_astro_buildings
@@ -195,6 +201,7 @@ astro_shipyard:
 astro_tower:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 		AddExtension: False
 	idle: legobattles_astro_buildings.shp
 		Start: 7
@@ -216,6 +223,7 @@ astro_tower:
 astro_tower2:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 		AddExtension: False
 	idle: legobattles_astro_buildings.shp
 		Start: 8
@@ -232,6 +240,7 @@ astro_tower2:
 astro_tower3:
 	Defaults:
 		Filename: legobattles_astro_buildings.shp
+		Scale: 2.0
 		AddExtension: False
 	idle: legobattles_astro_buildings.shp
 		Start: 9
@@ -275,6 +284,7 @@ astro_builder:
 	#inherits: ^legoinfantry
 	Defaults:
 		Filename: astro_builder.shp
+		Scale: 2.0
 	stand: 
 		Facings: -8
 		Combine:
@@ -357,6 +367,7 @@ lego_astro_mcv:
 	#inherits: ^legoinfantry
 	defaults:
 		Filename: astro_builder.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -404,6 +415,7 @@ astro_trooper:
 	#inherits: ^legoinfantry
 	defaults:
 		Filename: astro_trooper.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -461,6 +473,7 @@ astro_gripley:
 	#inherits: ^legoinfantry
 	defaults:
 		Filename: astro_gripley.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -518,6 +531,7 @@ astro_commando:
 	#inherits: ^legoinfantry
 	defaults:
 		Filename: astro_commando.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -575,6 +589,7 @@ astro_space_police:
 	#inherits: ^legoinfantry
 	defaults:
 		Filename: astro_space_police.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -634,6 +649,7 @@ astro_gemma:
 	# Inherits@status: ^lego_status_icons
 	defaults:
 		Filename: astro_gemma.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -713,6 +729,7 @@ astro_space_police_captain:
 	#inherits: ^legoinfantry
 	defaults:
 		Filename: astro_space_police_captain.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -791,6 +808,7 @@ astro_biff:
 	#inherits: ^legoinfantry
 	defaults:
 		Filename: astro_biff.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -870,6 +888,7 @@ legobattles_ghost:
 	#inherits: ^legoinfantry
 	defaults: 	
 		Filename: legobattles_ghost.shp
+		Scale: 2.0
 	stand:
 		Facings: -8
 		Combine:
@@ -930,6 +949,7 @@ astro_claw_tank:
 	#inherits: ^legoinfantry
 	defaults:
 		Filename: astro_claw_tank.shp
+		Scale: 2.0
 	stand:
 		Filename: astro_claw_tank.shp
 		Frames: 0,7,14,21,28,35,42,49
@@ -964,6 +984,7 @@ astro_transport:
 	idle:
 		Filename: astro_transport.shp
 		Facings: -16
+		Scale: 2.0
 	die: lego_explosion
 		Filename: lego_explosion.shp
 		Start: 0
@@ -977,6 +998,7 @@ astro_special_starfighter:
 	idle:
 		Filename: astro_special_starfighter.shp
 		Facings: -16
+		Scale: 2.0
 	die: lego_explosion
 		Filename: lego_explosion.shp
 		Start: 0
@@ -990,7 +1012,7 @@ astro_space_police_cruiser:
 	idle:
 		Filename: astro_space_police_cruiser.shp
 		Facings: -16
-		Scale: 0.75
+		Scale: 2.0
 	die: lego_explosion
 		Filename: lego_explosion.shp
 		Start: 0
@@ -1004,6 +1026,7 @@ astro_starship2:
 	idle:
 		Filename: astro_starship2.shp	
 		Facings: -16
+		Scale: 2.0
 	die: lego_explosion
 		Filename: lego_explosion.shp
 		Start: 0
@@ -1027,6 +1050,7 @@ astro_lolipop:
 	idle:
 		Filename: astro_lolipop.shp
 		Facings: -16
+		Scale: 2.0
 
 lego_flaming_star:
 	idle:
